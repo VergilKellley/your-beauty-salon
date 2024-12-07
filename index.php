@@ -59,7 +59,7 @@ require_once 'backend/display_contact_info.php';
         </nav>
 
         <div class="hero">
-            <div class="icon"><i></i></div>
+            <!-- <div class="icon"><i></i></div> -->
             <!-- <div class="icon"><ion-icon name="add-sharp"></ion-icon></div> -->
             <div class="title">
                 <p>Your Beauty Salon</p>
@@ -72,7 +72,7 @@ require_once 'backend/display_contact_info.php';
             <div class="preview">
                 <!-- <h1 style="position: relative; top: 100px;color:#fff">Hours</h1> -->
                 <!-- <p style="position: relative; top: 100px;color:#fff; text-align: left; font-size: 1.5rem; ">Hours</p> -->
-                <ul
+                <!-- <ul
                     style="display:flex; gap:15px; position: relative; top: 100px; list-style: none; color:#fff; position: relative; top: 100px">
                     <div>
                         <li>Mon - Closed</li>
@@ -86,7 +86,7 @@ require_once 'backend/display_contact_info.php';
                         <li>Sun - Closed</li>
                     </div>
 
-                </ul>
+                </ul> -->
 
                 <!-- <img src="./assets/img1.jpg" alt="">
                 <img src="./assets/img2.jpg" alt="">
@@ -101,14 +101,16 @@ require_once 'backend/display_contact_info.php';
         </section>
     </div>
 </section>
+
+
 <section class="content-container">
 
     <div class="section-containers second-container">
         
-        <div class="second-section-left-container" style="position: relative;display:flex; flex-direction:column;align-items:center">
+        <div class="second-section-left-container" style="position: relative;display:flex; flex-direction:column;">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur accusantium sit?</p>
-            <div style="border:8px solid #f40212; position:relative; height:270px; width:300px; margin-top:200px" class="sec-two-right-side-img-container">
-                <img style="position:absolute;bottom:0; z-index:2;height:175%" src="./assets/img21.jpg" alt="">
+            <div style="border:20px solid #f40212;border-radius:5px; position:relative; height:270px; width:300px; margin-top:300px" class="sec-two-right-side-img-container">
+                <img style="position:absolute;bottom:0; z-index:2;height:175%;" src="./assets/img21.jpg" alt="">
             </div>
         </div>
         <div class="second-section-right-container">
@@ -126,81 +128,31 @@ require_once 'backend/display_contact_info.php';
                         </ul>
                     </div>
                 </div> -->
-            <div>
-                <h1 style="color:aliceblue; font-size: 2rem; text-align: center;">Your Beauty Salon</h1>
-            </div>
+            <!-- <div>
+                <h1 style="color:#F40212; font-size: 2rem; text-align: center;">Your Beauty Salon</h1>
+            </div> -->
 
-            <div class="small-photos">
-                <img style="border-radius:5px" src="images/salon.jpg" alt="">
-                <!-- <img src="./assets/img11.jpg" alt="">
-                <img src="./assets/img2.jpg" alt="">
-                <img class="display-none-on-mobile" src="./assets/img1.jpg" alt="">
-                <img class="display-none-on-mobile" src="./assets/img8.jpg" alt=""> -->
+            <div class="small-photos" style="position:relative;margin-top:150px">
+                <div style="height:200px;width:200px;background:#F40212;position:absolute;right:-20px;top:-20px; z-index:0;border-radius:5px "></div>
+                <img style="border-radius:5px;position:relative;z-index:2 " src="images/salon.jpg" alt="">
+                <div style="height:200px;width:200px;background:#F40212;position:absolute;left:-20px;bottom:-20px; z-index:0; border-radius:5px"></div>
             </div>
-            <div style="display: flex; gap: 20px;">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur accusantium sit?</p>
+            <div class="two-btns" style="display: flex; gap: 20px; margin-top:50px">
                 <button class="btn sec-two-btn">Book Now</button>
                 <button class="btn sec-two-btn">Photo Gallery</button>
             </div>
         </div>
     </div>
 
-    <section class="stylist-section">
-
-        <div class="stylist-container swiper">
-
-            <div class="stylist-slider-container">
-                <h2 style="text-align: center;margin-bottom: 20px;color:#fff">OUR STYLISTS</h2>
-                <div class="stylist-card-wrapper swiper-wrapper">
-                    <div class="stylist-card swiper-slide">
-                        <img class="stylist-card-image" src="./images/stylist1.jpg" alt="">
-                        <h2>Ella</h2>
-                        <p>Hair Stylist</p>
-                        <button>Book Now</button>
-                    </div>
-                    <div class="stylist-card swiper-slide">
-                        <img class="stylist-card-image" src="./images/stylist2.jpg" alt="">
-                        <h2>Virginia</h2>
-                        <p>Makeup Artist</p>
-                        <button>Book Now</button>
-                    </div>
-                    <div class="stylist-card swiper-slide">
-                        <img class="stylist-card-image" src="./images/stylist3.jpg" alt="">
-                        <h2>Maria</h2>
-                        <p>Manicurist</p>
-                        <button>Book Now</button>
-                    </div>
-                    <div class="stylist-card swiper-slide">
-                        <img class="stylist-card-image" src="./images/stylist4.jpg" alt="">
-                        <h2>Josie</h2>
-                        <p>Hair Stylist</p>
-                        <button>Book Now</button>
-                    </div>
-                    <div class="stylist-card swiper-slide">
-                        <img class="stylist-card-image" src="./images/stylist5.jpg" alt="">
-                        <h2>Jaycell</h2>
-                        <p>Manicurist</p>
-                        <button>Book Now</button>
-                    </div>
-                    <div style="width: 300px !important;" class="stylist-card swiper-slide">
-                        <img class="stylist-card-image" src="./images/stylist6.jpg" alt="">
-                        <h2>Nina</h2>
-                        <p>Makeup Artist</p>
-                        <button>Book Now</button>
-                    </div>
-                </div>
-                <div class="swiper-button-next swiperNav_btn"></div>
-                <div class="swiper-button-prev swiperNav_btn"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
 
 
-    <div style="color:aliceblue; text-align: left; padding: 0 0 6rem;">
-        <div style=" width: 80vw; margin:0 auto; border-radius: 5px; padding: 10px;">
+
+    <div class="popular-services" style="color:aliceblue; text-align: left; padding: 0 0 6rem;">
+        <div class="popular-services-container" style=" width: 80vw; margin:0 auto; border-radius: 5px; padding: 10px;">
             <div
                 style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
-                <p style="color:#fff; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;">POPULAR SERVICES</p>
+                <p style="color:#fff; text-align: center; font-size: 2rem; padding: 8rem 0 2rem;">POPULAR SERVICES</p>
             </div>
 
             <div style="position:relative; height: fit-content;" class="services-containers">
@@ -256,81 +208,149 @@ require_once 'backend/display_contact_info.php';
                 </div>    -->
         </div>
         <div style="width:100%; display: flex; justify-content: center;">
-            <button
-                style="border-radius:3px;background-color: white;color:#F40212;border: none;margin-top: 2rem; padding: 10px 17px; font-weight: bolder;">VIEW
-                ALL SERVICES</button>
+            <button class="btn">VIEW ALL SERVICES</button>
         </div>
     </div>
+
+    <section class="stylist-section">
+
+        <div class="stylist-container swiper">
+
+            <div class="stylist-slider-container">
+                <h2 style="text-align: center;margin-bottom: 20px;color:#fff">OUR STYLISTS</h2>
+                <div class="stylist-card-wrapper swiper-wrapper">
+                    <div class="stylist-card swiper-slide">
+                        <img class="stylist-card-image" src="./images/stylist1.jpg" alt="">
+                        <h2>Ella</h2>
+                        <p>Hair Stylist</p>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="stylist-card swiper-slide">
+                        <img class="stylist-card-image" src="./images/stylist2.jpg" alt="">
+                        <h2>Virginia</h2>
+                        <p>Makeup Artist</p>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="stylist-card swiper-slide">
+                        <img class="stylist-card-image" src="./images/stylist3.jpg" alt="">
+                        <h2>Maria</h2>
+                        <p>Manicurist</p>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="stylist-card swiper-slide">
+                        <img class="stylist-card-image" src="./images/stylist4.jpg" alt="">
+                        <h2>Josie</h2>
+                        <p>Hair Stylist</p>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="stylist-card swiper-slide">
+                        <img class="stylist-card-image" src="./images/stylist5.jpg" alt="">
+                        <h2>Jaycell</h2>
+                        <p>Manicurist</p>
+                        <button>Book Now</button>
+                    </div>
+                    <div style="width: 300px !important;" class="stylist-card swiper-slide">
+                        <img class="stylist-card-image" src="./images/stylist6.jpg" alt="">
+                        <h2>Nina</h2>
+                        <p>Makeup Artist</p>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiperNav_btn"></div>
+                <div class="swiper-button-prev swiperNav_btn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
 </section>
 
-<section style='position:relative;background: #000;color:#fff' class="navBeforeFooter">
-      <div class="box box-1">
-        <!-- <div><h2 style='font-size:2.3rem'><?= $business_name; ?></h2></div> -->
-        <div class="bf-text">Sign Up For Special Offers</div>
-        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tempore quas eaque pariatur consequuntur quos.</p>
-
-        <div class="bf-text">
-          <p>Subscribe For Offers</p>
+<!-- <nav>
+        <div class="nav-item">
+            <a href="index.php" id="active">HOME<a>
         </div>
-
-        <div class="subscribe">
-          <form style="display:flex; flex-direction:column; gap:1rem; color:#fff" action="backend/subscribe_logic.php" method="POST">
-          <label for="email-address">Enter Email</label>
-          <input id="email-address" type="email" name="email_address" required>
-          <button style='background: <?= $accent_color; ?>; border 1px solid <?= $accent_color; ?>;' class="btn" name="submit_email_address">Subscribe</button>
-          </form>
-          
+        <div class="nav-item">
+            <a href="#" id="active">BOOK NOW<a>
         </div>
-      </div>
-      <div class="box box-2">
-        <div class="bf-text">Site Links</div>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="Services.php">Services</a></li>
-          <li><a href="Portfolio.php">Gallery</a></li>
-          <li><a href="Contact.php">Contact</a></li>
-        </ul>
-
-        <div class="icons">
-          <a href="#" class="fa-brands fa-facebook-f"></a>
-          <a href="#" class="fa-brands fa-instagram"></a>
-          <!-- <a href="" class="fa-brands fa-google"></a>
-          <a href="" class="fa-brands fa-youtube"></a> -->
+        <div class="nav-item">
+            <a href="draggable-image-slider.php">GALLERY<a>
         </div>
-      </div>
-      <div class="box box-3">
-        <div class="bf-text">Say Hi!</div>
-        <ul class="sayHiItem">
-          <li><a href="mailto:contact@yourbarbershop.com"><?= $email; ?></a></li>
-          <!-- <li>
-            <a href="">contact@yoursalon.com</a>
-          </li> -->
-        </ul>
+    </nav> -->
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sit quia commodi ipsam nostrum nisi
+                aut sunt libero repudiandae deserunt?</p>
+        </div>
+        <div class="contact-container">
+            <div class="contactInfo">
+                <div class="contact-box">
+                    <div class="contact-icon"><b></b><i class="fa-solid fa-location-pin"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>555 Broadway Road, <br>Chicago, Illinos,<br>60640</p>
+                    </div>
+                </div>
+                <div class="contact-box">
+                <!-- background: #01dbc2; -->
+                    <div class="contact-icon"><b></b><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>000-000-0000</p>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><b></b><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>contact@yourbeautysalon.com</p>
+                    </div>
+                </div>
+                <h2 class="txt">Connect with us</h2>
+                <ul class="sci">
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                    <!-- <li><a href=""></a></li> -->
+                </ul>
+            </div>
+            <div style="width:35vw" id='google-map' class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d94931.28526405447!2d-87.73376788659829!3d41.965868789513195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d42.043303699999996!2d-87.6876873!4m5!1s0x880e2cb8112c6f11%3A0xc0f69f2a2e5409ff!2s150%20N%20Wacker%20Drive%20Building%2C%20150%20N%20Wacker%20Dr%20Suite%20660%2C%20Chicago%2C%20IL%2060606!3m2!1d41.8847641!2d-87.6373378!5e0!3m2!1sen!2sus!4v1733508054309!5m2!1sen!2sus"  style="border:0; width:100%; height: 426px; padding:20px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="" id="" required="required"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        <div class="bf-text">Call Us</div>
-        <ul class="sayHiItem">
-          <li><a href="tel:+19803351233"><?= $phone; ?></a></li>
-        </ul>
 
-        <div class="bf-text">Visit Us</div>
-        <a href="contact.php#google-map" style='color:#fff; text-decoration: none'>
-          <p><?= $street_address; ?></p>
-          <p><?= $suite_unit; ?></p>
-        <p><?= $city; ?>, <?= $business_state; ?> <?= $zip; ?></p></a>
-        
-      </div>
-     </section>
 
     <footer style='background:#000; position:relative; z-index:9999999999'>
-      <div class="fbox">
-        Copyright &copy; 2024 <?= $business_name; ?> | Website designed and powered by
-        <a style='color:#fff; text-decoration:none' href="https://webqwick.com/" target='_blank'>WebQwick.com</a>.
-      </div>
-      <div>
-        All other trademarks, service marks and trade names referenced in this
-        material are the property of their respective owner.
-      </div>
+        <div class="fbox">
+            Copyright &copy; 2024 <?= $business_name; ?> | Website designed and powered by
+            <a style='color:#fff; text-decoration:none' href="https://webqwick.com/" target='_blank'>WebQwick.com</a>.
+        </div>
+        <div>
+            All other trademarks, service marks and trade names referenced in this
+            material are the property of their respective owner.
+        </div>
     </footer>
 
 
@@ -395,7 +415,7 @@ tl.to(".container", {
     ease: "powwer4.inOut"
 }, "-=1");
 
-tl.to(".nav-item a, .title p, .slide-num p, .preview p, .preview ul", {
+tl.to("nav, .nav-item a, .title p, .slide-num p, .preview p, .preview ul", {
     top: 0,
     stagger: 0.075,
     duration: 1,
