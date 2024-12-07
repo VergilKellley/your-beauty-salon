@@ -6,6 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- https://www.youtube.com/watch?v=b1Tceo_x32I left off at 15:59 -->
     <meta charset="UTF-8">
@@ -15,6 +16,7 @@
     <script src="https://kit.fontawesome.com/097e6a8a28.js" crossorigin="anonymous"></script>
     <title>Your Beauty Salon</title>
 </head>
+
 <body>
     <nav>
         <div class="nav-item">
@@ -33,7 +35,8 @@
     <section class="contact">
         <div class="contact-content">
             <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sit quia commodi ipsam nostrum nisi aut sunt libero repudiandae deserunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem sit quia commodi ipsam nostrum nisi
+                aut sunt libero repudiandae deserunt?</p>
         </div>
         <div class="contact-container">
             <div class="contactInfo">
@@ -45,6 +48,7 @@
                     </div>
                 </div>
                 <div class="contact-box">
+                <!-- background: #01dbc2; -->
                     <div class="contact-icon"><b></b><i class="fa-solid fa-phone"></i></div>
                     <div class="text">
                         <h3>Phone</h3>
@@ -66,78 +70,45 @@
                     <!-- <li><a href=""></a></li> -->
                 </ul>
             </div>
-            <div class="contactForm"></div>
+            <div style="width:35vw" id='google-map' class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d94931.28526405447!2d-87.73376788659829!3d41.965868789513195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d42.043303699999996!2d-87.6876873!4m5!1s0x880e2cb8112c6f11%3A0xc0f69f2a2e5409ff!2s150%20N%20Wacker%20Drive%20Building%2C%20150%20N%20Wacker%20Dr%20Suite%20660%2C%20Chicago%2C%20IL%2060606!3m2!1d41.8847641!2d-87.6373378!5e0!3m2!1sen!2sus!4v1733508054309!5m2!1sen!2sus"  style="border:0; width:100%; height: 426px; padding:20px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+            <div class="contactForm">
+                <form action="">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="" id="" required="required"></textarea>
+                        <span>Type your message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
-    <section style='position:relative;background: #000;color:#fff' class="navBeforeFooter">
-      <div class="box box-1">
-        <!-- <div><h2 style='font-size:2.3rem'><?= $business_name; ?></h2></div> -->
-        <div class="bf-text">Sign Up For Special Offers</div>
-        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tempore quas eaque pariatur consequuntur quos.</p>
 
-        <div class="bf-text">
-          <p>Subscribe For Offers</p>
-        </div>
-
-        <div class="subscribe">
-          <form style="display:flex; flex-direction:column; gap:1rem; color:#fff" action="backend/subscribe_logic.php" method="POST">
-          <label for="email-address">Enter Email</label>
-          <input id="email-address" type="email" name="email_address" required>
-          <button style='background: <?= $accent_color; ?>; border 1px solid <?= $accent_color; ?>;' class="btn" name="submit_email_address">Subscribe</button>
-          </form>
-          
-        </div>
-      </div>
-      <div class="box box-2">
-        <div class="bf-text">Site Links</div>
-        <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="Services.php">Services</a></li>
-          <li><a href="Portfolio.php">Gallery</a></li>
-          <li><a href="Contact.php">Contact</a></li>
-        </ul>
-
-        <div class="icons">
-          <a href="#" class="fa-brands fa-facebook-f"></a>
-          <a href="#" class="fa-brands fa-instagram"></a>
-          <!-- <a href="" class="fa-brands fa-google"></a>
-          <a href="" class="fa-brands fa-youtube"></a> -->
-        </div>
-      </div>
-      <div class="box box-3">
-        <div class="bf-text">Say Hi!</div>
-        <ul class="sayHiItem">
-          <li><a href="mailto:contact@yourbarbershop.com"><?= $email; ?></a></li>
-          <!-- <li>
-            <a href="">contact@yoursalon.com</a>
-          </li> -->
-        </ul>
-
-        <div class="bf-text">Call Us</div>
-        <ul class="sayHiItem">
-          <li><a href="tel:+19803351233"><?= $phone; ?></a></li>
-        </ul>
-
-        <div class="bf-text">Visit Us</div>
-        <a href="contact.php#google-map" style='color:#fff; text-decoration: none'>
-          <p><?= $street_address; ?></p>
-          <p><?= $suite_unit; ?></p>
-        <p><?= $city; ?>, <?= $business_state; ?> <?= $zip; ?></p></a>
-        
-      </div>
-     </section>
 
     <footer style='background:#000; position:relative; z-index:9999999999'>
-      <div class="fbox">
-        Copyright &copy; 2024 <?= $business_name; ?> | Website designed and powered by
-        <a style='color:#fff; text-decoration:none' href="https://webqwick.com/" target='_blank'>WebQwick.com</a>.
-      </div>
-      <div>
-        All other trademarks, service marks and trade names referenced in this
-        material are the property of their respective owner.
-      </div>
+        <div class="fbox">
+            Copyright &copy; 2024 <?= $business_name; ?> | Website designed and powered by
+            <a style='color:#fff; text-decoration:none' href="https://webqwick.com/" target='_blank'>WebQwick.com</a>.
+        </div>
+        <div>
+            All other trademarks, service marks and trade names referenced in this
+            material are the property of their respective owner.
+        </div>
     </footer>
 </body>
+
 </html>
