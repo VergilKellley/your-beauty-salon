@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-weight-600: 600;
+    --med-font: 1rem;
+    --large-font: 1.5rem;
+    --ml-10: 10px;
+    --mt-5: 5px;
+    --mb-5: 5px;
+    --input-padding: 5px 5px;
+    --transparent-bkgd: transparent;
+    --no-focus: none;
+    --no-border: none;
+    --no-outline: none;
+    --off-white: #faf9f6;
+}
+
+.large-font {
+    font-size: var(--large-font);
+}
+
+.border-bottom {
+    border-bottom: 2px solid #333;
+}
+
+#appointment-container {
+    background-color: var(--off-white);
+}
+
+h3 {
+    font-size: var(--large-font);
+}
+label {
+    font-weight: var(--font-weight-600);
+    font-size: var(--med-font);
+}
+
+.input-styles {
+    padding: var(--input-padding);
+    border: var(--no-outline);
+    border: var(--no-border);
+    margin-top: var(--mt-5);
+    /* border-bottom: 1px solid #333; */
+}
+
+.input-styles:focus, textarea:focus {
+    outline: var(--no-focus);
+    margin-left: var(--ml-5);
+}
+
+.input-styles, textarea {
+    font-size: var(--med-font);
+    background-color: var(--transparent-bkgd);
+}
+
+textarea {
+    margin-top: var(--mt-5);
+}
+
+/****** MEDIA QUERY ******/
+
+@media(max-width: 1030px) {
+    #appointment-container {
+        flex-direction: column;
+    }
+    #appointment-container div {
+        max-width: 100% !important;
+    }
+    #form-container {
+        transform: translateY(0%) !important;
+        top: 0 !important;
+        position: relative !important;
+    }
+    #full-size-img {
+        display: none;
+    }
+    #randl-logo {
+        width: 25% !important;
+    }
+    .max-width-65 {
+        max-width: 65%;
+    }
+}
+
+@media(max-width: 750px) {
+    #form-container {
+        width: auto !important;
+        height: auto !important;
+        position: relative !important;
+        transform: translateY(0) !important;
+    }
+}
+
+@media(max-width: 500px) {
+    h3 {
+        font-size: 1.2rem;
+        max-width: 65%;
+    }
+
+    #card-element {
+        width: 90% !important;
+    }
+}
