@@ -1,0 +1,157 @@
+
+
+.aboutServices {
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.aboutServices .ser-litText {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: var(--font-02);
+    text-align: center;
+    color: var(--global-color-1);
+}
+
+.aboutServices .ser-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.aboutServices .ser-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    color: #fff;
+}
+
+.aboutServices .ser-box .box {
+    position: relative;
+    top: 0;
+    overflow: hidden;
+}
+
+.aboutServices .ser-box .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--global-color-1);
+    z-index: 1;
+    opacity: .1;
+    transition: all .4s ease;
+    border-radius: 2%;
+}
+
+.aboutServices .ser-box .box:hover::after {
+    width: 0;
+}
+
+.aboutServices .ser-box .box .img {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.aboutServices .ser-box .box .img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+}
+
+.aboutServices .ser-box .box .boxinfo {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    z-index: 2;
+}
+
+.aboutServices .ser-box .box .boxinfo .ser-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: var(--font-02);
+    padding-bottom: 8rem;
+}
+
+.aboutServices .ser-box .box .boxinfo .ser-des {
+    font-family: var(--font-02);
+}
+
+.discountSection {
+    padding: 5rem 2% 5rem;
+}
+
+/* slider */
+.slider {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 5%;
+}
+
+.slider .imgslider {
+    width: 100%;
+    height: 100%;
+    width: 400px;
+    position: relative;
+    padding: 18rem 0;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.slider .imgslider .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.slider .imgslider .Prev {
+    position: absolute;
+    left: 0;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.slider .imgslider .Next {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    cursor: pointer;
+    transform: all .4s ease;
+}
+
+.slider .imgslider .Prev:hover,
+.slider .imgslider .Next:hover {
+    color: var(--global-color-1);
+    transform: scale(2);
+}
+
+.slider .sliderText {
+    width: 60%;
+}
+
+.slider .sliderText .st-heading {
+    color: var(--global-color-0);
+    font-size: 2.5rem;
+    font-family: var(--font-02);
+    margin-bottom: .5rem;
+}
+
+.slider .sliderText .lit-service .textinfo .ti-head {
+    font-family: var(--font-02);
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.slider .sliderText .lit-service {
+    padding: 3rem 0 0;
+}
