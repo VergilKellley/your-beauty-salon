@@ -1,0 +1,176 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --x-small-font: .75em;
+    --small-font: 1.5em;
+    --med-font: 2em;
+}
+
+input, textarea, label {
+    font-size: var(--small-font);
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+textarea {
+    padding:10px;
+}
+
+.edit-pages-btn {
+    padding: 10px 17px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: .5s all ease;
+    font-size: var(--x-small-font);
+    margin-top: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width:300px;
+}
+
+.edit-pages-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: green;
+    border: 1px solid green;
+}
+
+/* EDIT WEBSITE */
+.popular-services-container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.form-edit-website {
+    width:40vw;
+    font-size: var(--small-font);
+    border:1px solid #000;
+    padding: 20px;
+}
+
+.form-edit-website div div textarea {
+    width: 100%
+}
+
+/* EDIT HOME PAGE IMAGES */
+.form-edit-home-page-images {
+    font-size: var(--small-font);
+    border:1px solid #000;
+    padding: 20px;
+    width: 100%;
+    max-width:500px;
+}
+
+.edit-home-page-images-btn {
+    padding: 10px 17px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: .5s all ease;
+    font-size: var(--x-small-font);
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    max-width:300px;
+}
+
+.edit-home-page-images-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: green;
+    border: 1px solid green;
+}
+
+/* EDIT PHOTO GALLERY */
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    max-width:400px;
+}
+
+.form-edit-photo-gallery {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px
+}
+
+.slider-item figure {
+    width: 100%;
+}
+
+.slider-item figure div{
+    width: 100%;
+}
+
+.edit-photo-gallery-delete-btn {
+    padding: 10px 17px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: .5s all ease;
+    font-size: var(--x-small-font);
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    max-width:300px;
+}
+
+.edit-photo-gallery-delete-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: red;
+    border: 1px solid red;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:1200px) {
+    input, textarea, label {
+        width: 70%;
+    }
+
+    .form-edit-website {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:920px) {
+    input, textarea, label {
+        width: 80%;
+    }
+
+    .form-edit-website {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:475px) {
+    input, textarea, label {
+        width: 100%;
+    }
+
+    .form-edit-website {
+        width: 100%;
+    }
+}
