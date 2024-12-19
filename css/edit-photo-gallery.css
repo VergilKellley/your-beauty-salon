@@ -1,0 +1,24 @@
+.form-edit-photo-gallery:nth-child(odd) {
+    background-color:rgb(231, 224, 224);
+ }
+
+ .form-edit-photo-gallery {
+    border: 1px solid #000;
+    margin-bottom: 50px;
+    border-radius:5px;
+ }
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px;
+}
