@@ -1,0 +1,49 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    padding-top: 100px;
+}
+
+.popular-services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+.form-edit-website:nth-child(odd) {
+    background-color: #e6dbdb;
+}
+
+.popular-services-container .form-edit-website {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    padding-bottom: 20px;
+}
+
+.popular-services-container .form-edit-website div div,
+label,
+input,
+textarea {
+    width: 90%;
+    font-size: 16px;
+}
+
+.popular-services-container .form-edit-website div button {
+    width: 50%;
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.popular-services-container .form-edit-website div button:hover {
+    cursor:pointer;
+}
+
+.popular-services-container .form-edit-website div div input, textarea {
+    margin-top: 10px;
+}
+
