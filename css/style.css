@@ -8,12 +8,22 @@ body {
     overflow-x: hidden;
 }
 
+.montserrat-alternates-semibold {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 8vw;
+  }
+  
+
 #header-section {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
     background: #000;
     font-family: "Nue Montreal" fantasy;
+    position: relative;
+    z-index: 1;
 }
 /* html,
 body {
@@ -41,6 +51,8 @@ body {
     background: #fff;
     border: 2px solid transparent;
     transition: 0.2s ease;
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -51,7 +63,7 @@ body {
     width: 100vw;
     /* height: 100vh; */
     position: relative;
-    /* z-index: 999; */
+    z-index: 999;
     background-color: #000;
 }
 
@@ -80,16 +92,14 @@ body {
 }
 
 .second-section-right-container {
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     gap: 2rem;
     flex-direction: column;
     align-items: center;
 
 }
-.second-section-right-container:nth-child(2) {
 
-}
 .small-photos {
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
@@ -185,7 +195,7 @@ nav {
     font-size: 100px;
     color: #F40212;
     /* margin-left: -560px; */
-    text-wrap: 600;
+    font-weight: 600;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -232,6 +242,7 @@ nav {
 
 .container {
     position: fixed;
+    z-index: -7;
     width: 100%;
     height: 100%;
     display: flex;
@@ -271,28 +282,51 @@ nav {
 }
 
 /* SERVICES CONTAINERS */
-.services-containers .service-container h2 {
+.services-containers .service-container div h2 {
     font-size: 1.5rem;
+    margin-bottom: .75rem;
 }
 .services-containers .service-container h2, p {
     text-align: left;
 }
 
+/* .services-containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 2rem;
+    max-width: 600px;
+} */
 .services-containers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
 }
+
 .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-container div {
     background-color: #F40212;
     box-shadow: 6px 6px 2px #f36169;
-    /* box-shadow: 5px 10px hsl(356, 86%, 66%); */
+    position: relative;
     padding: 10px;
     width: 300px;
     border-radius: 5px;
-    margin-bottom: 2rem;
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
 }
+
+/* .service-container div {
+    margin-bottom: 30px;
+} */
 
 .service-container h2 {
     font-size: 1.5rem;
@@ -415,39 +449,80 @@ nav {
 
 
 
-@media screen and (max-width: 1585px) {
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+.header::before {
+    content: "";
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    /* background-color: #000; */
+    opacity: .4;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 2.6rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.fade-background-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.fade-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -5;
+}
+
+.showing {
+    opacity: 1;
+    z-index: -1;
+    transition: none;
+}
+
+
+
+
+
+/* @media screen and (max-width: 1585px) {
  .small-photos {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
  }
 }
-
+*/
 @media screen and (max-width: 1289px) {
- .small-photos {
+ /* .small-photos {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
- }
+ } */
 
  .two-btns {
     flex-direction: column;
     margin-top: 20px !important;
  }
-}
-
-@media screen and (max-width: 1068px) {
-    .second-container {
-        flex-direction: column-reverse;
-        padding: 0 0 10vh 0;
-        align-items: center;
-    }
-    .section-containers div p {
-        width: 80vw;
-    }
-    .second-section-left-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 30px;
-    }
-
 }
 
 @media screen and (max-width: 955px) {
@@ -458,6 +533,9 @@ nav {
 /* HEADER */
 
 @media screen and (max-width: 900px) {
+    .contact-container .contactInfo .contact-box {
+        width: 90vw;
+    }
     .slide-num {
         text-align: left;
         padding-left: 2em;
@@ -479,7 +557,51 @@ nav {
     }
 }
 
+@media screen and (max-width: 825px) {
+
+    .half-pic-frame {
+        background: none !important;
+    }
+
+    .second-container {
+        flex-direction: column-reverse;
+        padding: 0 0 10vh 0;
+        align-items: center;
+    }
+
+    .service-container div {
+        flex: 0 0 100%;
+    }
+
+    .section-containers div p {
+        width:100%;
+        padding: 0 20px;
+    }
+
+    .sec-two-right-side-img-container {
+        height: 300px !important;
+        width: 370px !important;
+        margin-top: 300px !important;
+    }
+
+    .second-section-left-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
+
+    .small-photos {
+        width:100vw;
+    }
+
+    .montserrat-alternates-semibold {
+        font-size: 75px;
+    }
     .stylist-slider-container {
         margin: 80px 10px 40px;
     }
@@ -489,10 +611,50 @@ nav {
     }
 }
 
+@media screen and (max-width: 665px) {
+
+    .section-containers div p {
+        width: 100%;
+    }
+
+    .sec-two-right-side-img-container {
+        height: 280px !important;
+        width: 330px !important;
+        margin-top: 250px !important;
+    }
+}
+
+@media screen and (max-width: 525px) {
+
+    .sec-two-right-side-img-container {
+        height: 300px !important;
+        width: 370px !important;
+        margin-top: 280px !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .sec-two-right-side-img-container {
+        height: 240px !important;
+        width: 290px !important;
+        margin-top: 180px !important;
+    }
+
+    .contact {
+        padding: 30px 0 !important;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .popular-services-container {
         width: 95vw !important;
         margin: 0 !important;
+    }
+
+    .text p {
+        word-wrap: break-word;
+        font-size: 16px;
     }
 
     .popular-services {
