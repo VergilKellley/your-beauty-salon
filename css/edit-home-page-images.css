@@ -1,0 +1,57 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    padding-top: 100px;
+}
+
+section div .form-edit-home-page-images:nth-child(odd) {
+    background-color:rgb(242, 239, 239);
+}
+
+.images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+}
+
+.images-container .form-edit-home-page-images {
+
+    width: 100%;
+    height: 100%;
+}
+
+.form-edit-home-page-images div div {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding-bottom:40px;
+}
+
+.images-container .form-edit-home-page-images div div,
+label,
+input,
+textarea {
+    width: 90%;
+    font-size: 24px;
+}
+
+.images-container .form-edit-home-page-images div button {
+    width: 50%;
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+.images-container .form-edit-home-page-images div button:hover {
+    cursor:pointer;
+}
+
+.images-container .form-edit-home-page-images div div input, textarea {
+    margin-top: 10px;
+}
+
+.landing-page-img {
+    width: 300px;
+}
