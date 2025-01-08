@@ -1,6 +1,12 @@
 <?php
 session_start();
 require "backend/db.php";
+
+if (!isset($_SESSION["user_id"])) {
+
+    header("location: index");
+    exit();
+}
 // if (!isset($_SESSION["useruid"])) {
 
 //     header("Location: index.php");
@@ -94,7 +100,7 @@ require "backend/db.php";
         <h3 style='padding-top: 40px'><a href="edit-website">Back</a>
         </h3>
         <div id='form-container' style="display: flex; gap:4rem">
-            <form action="backend/add_new_services_chosen.php" class="services_form" method="POST" enctype="multipart/form-data">
+            <form action="backend/add_new_services_info.php" class="services_form" method="POST" enctype="multipart/form-data">
                 <div>
                     <h2>add new service</h2>
                 </div>
@@ -106,9 +112,6 @@ require "backend/db.php";
 
                     <label for="service_img_desc">image description</label>
                     <input type="text" name="service_img_desc">
-
-                    <label for="service_video">service video (mp4 only)</label>
-                    <input type="text" name="service_video">
 
                     <label for="service_title">service title</label>
                     <input type="text" name="service_title" id="service_title" placeholder="Haircuts">
@@ -150,6 +153,16 @@ require "backend/db.php";
                     <div class='nth-child-bkgd-color' style='border:1px solid #333; padding: 10px; line-height:1.5;'>
                         
                         <input type="hidden" name="id" value="<?php $services['id'] ?>">
+
+                        <div id='edit<?php $services['id'] ?>'>
+                    <?php
+                        if(isset($_SESSION['empty_edit_image'])) {
+                            echo "<div style='border:1px solid red; padding:10px'>
+                                    <p style='color:red;font-weight:bold; font-size:2rem';>" . $_SESSION['empty_edit_image'] . "</p>";
+                            unset ($_SESSION['empty_edit_image']);
+                        }
+                    ?>
+                    </div>
 
 
                         <td><strong>image: </strong></td>
