@@ -1,5 +1,6 @@
 <?php
 require "backend/db.php";
+// https://www.youtube.com/watch?v=ejN-oAw9vC0 update page with ajax get data from database Dani krossing
 
             $appointmentNewCount = $_POST['appointmentNewCount'];
 
