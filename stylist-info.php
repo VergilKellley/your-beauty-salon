@@ -91,7 +91,7 @@ require "backend/db.php";
 
 <body>
     <section class="stylist_info_container" style="height: 100vh; display:grid; place-items:center;">
-        <h3 style='padding-top: 40px'><a href="/">Back</a>
+        <h3 style='padding-top: 40px'><a href="edit-website">Back</a>
         </h3>
         <div id='form-container' style="display: flex; gap:4rem">
             <form action="backend/add_new_stylist_info.php" class="stylist_form" method="POST" enctype="multipart/form-data">
