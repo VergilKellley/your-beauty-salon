@@ -6,7 +6,10 @@ require 'header.php';
     <nav class="mobile-draggable-slider-nav">
         <a href="index">HOME</a>
         <a href="book-appointment">BOOK NOW</a>
-        <a href="contact">CONTACT</a>
+        <a href="all-services">SERVICES</a>
+        <a href="#">GALLERY</a>
+        <a href="about">ABOUT</a>
+        <a href="index#contact">CONTACT</a>
     </nav>
 </div>
 <header>
