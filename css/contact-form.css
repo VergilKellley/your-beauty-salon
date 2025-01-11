@@ -11,14 +11,14 @@ nav {
     z-index: 999;
     display: flex;
     justify-content: center;
-    padding: 2.5em;
+    /* padding: 2.5em; */
     align-items: center;
     gap: 20px;
 }
 
 nav .nav-item a {
     text-decoration: none;
-    color: #F40212;
+    color: #Fff;
 }
 
 .contact {
@@ -29,7 +29,9 @@ nav .nav-item a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #000 ;
+    background: #000;
+    z-index: 2;
+    margin-top: 50px;
 }
 
 .contact .contact-content {
@@ -38,14 +40,12 @@ nav .nav-item a {
 }
 
 .contact .contact-content h2 {
-    font-size: 3em;
     color: #fff;
     font-weight: 500;
 }
 
 .contact .contact-content p {
     color: #fff;
-    font-size: 1.1em;
     font-weight: 300;
 }
 
@@ -110,6 +110,16 @@ nav .nav-item a {
     font-size: 1.25em;
 }
 
+.contact-form-send-btn {
+    padding: 8px 17px;
+    font-size: 16px;
+}
+
+.contact-form-send-btn:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
 .text p {
     word-wrap:break-word;
 }
@@ -142,7 +152,7 @@ nav .nav-item a {
     position: relative;
     display: flex;
     gap: 30px;
-    margin: 20px 0;
+    margin: 70px 0 0 160px;
 }
 
 .contact-container .contactInfo .sci li {
@@ -207,7 +217,6 @@ nav .nav-item a {
 }
 
 .contact-container .contactForm form h2 {
-    font-size: 2em;
     color: #000;
     font-weight: 500;
 }
@@ -228,7 +237,7 @@ nav .nav-item a {
     border: none;
     background: transparent;
     border-bottom: 2px solid #F40212;
-    color: #fff;
+    color: #000;
     outline: none;
     resize: none;
 }
@@ -273,9 +282,6 @@ nav .nav-item a {
         width:55vw !important;
 
     }
-    .contact-container {
-        flex-direction: column;
-    }
 
     .contact-container .contactInfo,
     .contact-container .contactForm {
@@ -293,6 +299,67 @@ nav .nav-item a {
     }
 }
 
+/* @media screen and (max-width: 1350px) {
+    .contact-container {
+        flex-direction: column;
+    }
+} */
+
+@media screen and (max-width: 1350px) {
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        width: auto;
+    }
+
+    .contact-container .contactInfo, .contact-container .contactForm {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contact-container .contactInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:20px;
+        padding:40px
+    }
+
+    .contact-container .contactInfo .contact-box {
+        flex: 0 0 40%;
+    }
+
+    .contactForm {
+        width:70%;
+    }
+
+    .map-and-message-container {
+        display: flex;
+    }
+
+    .contact-container .contactForm,
+    .contact-container .contactForm form {
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .map-and-message-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* .map {
+        width:95vw !important;
+
+    } */
+}
+
 @media screen and (max-width: 600px) {
 
     .contact .contact-content {
@@ -307,7 +374,13 @@ nav .nav-item a {
 
     .contact-container .contactForm {
         padding: 30px;
-        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 545px) {
+
+    .contact-container .contactInfo .contact-box {
+        flex: 0 0 100%;
     }
 }
 
@@ -318,5 +391,15 @@ nav .nav-item a {
     }
     nav .nav-item a {
         font-size: 16px;
+    }
+
+    .contact-container .contactInfo {
+        padding: 40px 0 40px 20px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .contact-container .contactInfo {
+        padding-left: 40px;
     }
 }
