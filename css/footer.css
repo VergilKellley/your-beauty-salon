@@ -117,5 +117,6 @@ footer {
     footer {
         display: grid !important;
         padding: 20px;
+        width: 100vw;
     }
 }
