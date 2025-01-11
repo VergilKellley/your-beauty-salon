@@ -1,5 +1,7 @@
-
-<!DOCTYPE html>
+<?php
+    require_once 'header.php';
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,8 +11,8 @@
     <title>Document</title>
 </head>
 
-<body>
-    <section style="height:75px; width:100vw;position:fixed;z-index:9999999">
+<body> -->
+    <!-- <section style="height:75px; width:100vw;position:fixed;z-index:9999999">
     <div style="display:flex;justify-content:center;align-items:center;height: 100%;background:#000;width:100vw">
       <ul style="display:flex; gap:40px;color:#fff">
         <li><a style="color:#fff;font-size:18px;font-weight:bolder" href="index">HOME</a></li>
@@ -21,9 +23,9 @@
         <li><a style="color:#fff;font-size:18px;font-weight:bolder" href="index#contact">CONTACT</a></li>
       </ul>
     </div>
-    </section>
-    <section class="about-header">
-    <div style="position:absolute;top:75px; bottom:0; right:0; left:0;background:#000; opacity:.5"></div>
+    </section> -->
+    <div class="about-header">
+    <div style="position:absolute;top:75px; bottom:-35px; right:0; left:0;background:#000; opacity:.5"></div>
         <div style="position:absolute; text-align:center; width:50vw; color:#fff">
             <h2 style="position:relative;z-index:3">Style & Elegance</h2>
             <p style="margin-top:20px;line-height:1.5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati expedita corporis unde illo iure
@@ -31,10 +33,10 @@
                 At, doloribus.</p>
         </div>
         <div
-            style="background:url('images/glamorous-woman.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:calc(100vh - 75px); background-position:center;margin-top:120px">
+            style="background:url('images/glamorous-woman.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;margin-top:120px">
         </div>
-    </section>
-    <section class="about-section">
+</div>
+    <div class="about-section">
         <div>
             <div class="large-img-and-content">
                 <div class="img-and-large-text">
@@ -88,13 +90,13 @@
                     </div>
                 </div>
                 <div style="position:relative; width: 45%;">
-                    <img style="height: 100px;position: absolute;bottom: -4rem;
+                    <img style="height: 100px;position: absolute;bottom:0;width:auto;
     left: 50%;
     transform: translateX(-50%);" src="bkgd-images/makeup-brushes.png" alt="">
                 </div>
             </div>
         </div>
-    </section>
+</div>
 
     <?php
       require 'contact.php';
