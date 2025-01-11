@@ -75,6 +75,7 @@
     <nav class="mobile-nav-index" style="position:fixed;z-index:99999999999;background:#000;top:0">
         <div style="padding 0 20px" class="mobile-header">
             <div class="mobile-navbar">
+                <?php if (!isset($user)): ?>
                 <div class="mobile-nav-logo">
                     <h1 style="font-size: 2.5rem">SALON</h1>
                 </div>
@@ -83,13 +84,33 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-                <ul class="mobile-nav-menu">
-                    <li><a href="index">HOME</a></li>
-                    <li><a href="book-appointment">BOOK NOW</a></li>
-                    <li><a href="all-services">SERVICES</a></li>
-                    <li><a href="photo-gallery">GALLERY</a></li>
-                    <li><a href="about">ABOUT</a></li>
+                <ul style="background:rgba(0,0,0,.8)" class="mobile-nav-menu">
+                    <li style="display:inline-block;padding:1rem"><a href="index">HOME</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="book-appointment">BOOK NOW</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="all-services">SERVICES</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="photo-gallery">GALLERY</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="about">ABOUT</a></li>
                 </ul>
+                <?php elseif (isset($user)): ?>
+                <div class="mobile-nav-logo">
+                    <h1 style="font-size: 2.5rem">SALON</h1>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul style="background:rgba(0,0,0,.8)" class="mobile-nav-menu">
+                    <li style="display:inline-block;padding:1rem"><a href="index">HOME</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="book-appointment">BOOK NOW</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="all-services">SERVICES</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="photo-gallery">GALLERY</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="about">ABOUT</a></li>
+
+                    <li style="display:inline-block;padding:1rem"><a href="edit-website">EDIT WEBSITE</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="logout">LOGOUT</a></li>
+                </ul>
+                <?php endif; ?>
             </div>
         </div>
     </nav>
