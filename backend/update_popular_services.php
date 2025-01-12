@@ -1,9 +1,9 @@
 <?php
-
 session_start();
 require 'db.php';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_services_title']))) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_services_title']))) {
+
     $popular_services_title = filter_var($_POST['popular_services_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
 
@@ -16,17 +16,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../edit-popular-services.php');
-        die();
+        header('location: ../edit-website.php#popular-services-title');
     }
-} else {
-    // redirect to index.php
-    // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-header('location: ../index.php');
-die();
-}
+    else {
+        // redirect to index.php
+        // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
+    header('location: ../index');
+    die();
+    }
+} 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service_1']))) {
 
     $popular_service_1_title = filter_var($_POST['popular_service_1_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $popular_service_1_text = filter_var($_POST['popular_service_1_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -40,17 +40,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
+        header('location: ../edit-website#popular-services-1');
+        die();
+    } 
+    
+    else {
+        // redirect to index.php
+        // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
         header('location: ../index.php');
         die();
-    }
-} else {
-    // redirect to index.php
-    // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-    header('location: index.php');
-    die();
+        }
 }
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+elseif ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service_2']))) {
+    
     $popular_service_2_title = filter_var($_POST['popular_service_2_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $popular_service_2_text = filter_var($_POST['popular_service_2_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     //preg_replace("|(?mi-Us)[^0-9 \\-\\(\\)\\+\\/]|", '', $_REQUEST['phone']);
@@ -62,16 +65,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../index.php');
+        header('location: ../edit-website#popular-services-2');
         die();
-    }
-} else {
+    } 
+    else {
     // redirect to index.php
     // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-header('location: index.php');
-die();
+    header('location: ../index.php');
+    die();
+    }
 }
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service_3']))) {
 
     $popular_service_3_title = filter_var($_POST['popular_service_3_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $popular_service_3_text = filter_var($_POST['popular_service_3_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -85,16 +90,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../index.php');
+        header('location: ../edit-website#popular-services-3');
         die();
+    
+} 
+else {
+//     // redirect to index.php
+//     // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
+    header('location: photo-gallery.php');
+    die();
     }
-} else {
-    // redirect to index.php
-    // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-header('location: index.php');
-die();
 }
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service_4']))) {
 
     $popular_service_4_title = filter_var($_POST['popular_service_4_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $popular_service_4_text = filter_var($_POST['popular_service_4_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -108,16 +116,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../index.php');
+        header('location: ../edit-website#popular-services-4');
         die();
     }
-} else {
-    // redirect to index.php
-    // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-header('location: index.php');
-die();
+ 
+else {
+//     // redirect to index.php
+//     // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
+    header('location: index.php');
+    die();
+    }
+
 }
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service_5']))) {
 
     $popular_service_5_title = filter_var($_POST['popular_service_5_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $popular_service_5_text = filter_var($_POST['popular_service_5_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -131,16 +143,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../index.php');
+        header('location: ../edit-website#popular-services-5');
         die();
     }
-} else {
+
+else {
     // redirect to index.php
     // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-header('location: index.php');
-die();
+//     header('location: index.php');
+//     die();
+    }
+
 }
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_popular_service_6']))) {
 
     $popular_service_6_title = filter_var($_POST['popular_service_6_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $popular_service_6_text = filter_var($_POST['popular_service_6_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -154,12 +170,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../index.php');
+        header('location: ../edit-website#popular-services-6');
         die();
     }
-} else {
-    // redirect to index.php
-    // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-header('location: index.php');
-die();
+
+else {
+//     // redirect to index.php
+//     // $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
+//     header('location: index.php');
+//     die();
+    }
 }
