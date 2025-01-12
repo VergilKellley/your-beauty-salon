@@ -14,6 +14,7 @@ nav {
     /* padding: 2.5em; */
     align-items: center;
     gap: 20px;
+    height: 75px;
 }
 
 nav .nav-item a {
@@ -31,7 +32,6 @@ nav .nav-item a {
     flex-direction: column;
     background: #000;
     z-index: 2;
-    margin-top: 50px;
 }
 
 .contact .contact-content {
