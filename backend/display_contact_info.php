@@ -10,5 +10,18 @@ if ($resultCheck > 0) {
     $business_name = $row['business_name'];
     $phone = $row['phone'];
     $email = $row['email'];
+    $street_name = $row['street_name'];
+    $street_number = $row['street_number'];
+    $suite_number = $row['suite_number'];
+    $city_name = $row['city_name'];
+    $state_name = $row['state_name'];
+    $zip_code = $row['zip_code'];
+    $contact_page_title = $row['contact_page_title'];
+    $contact_page_text = $row['contact_page_text'];
+    $facebook = $row['facebook'];
+    $instagram = $row['instagram'];
+    $tiktok = $row['tiktok'];
+    $linkedin = $row['linkedin'];
+    $google_map_url = $row['google_map_url'];
     }
 }
