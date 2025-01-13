@@ -95,13 +95,13 @@
         </div>
 
     </div>
-
-</div>
-<div style="background:white">
-    <div>
-        <img src="images/salon-3.jpg" alt="">
+    <div style="background:white">
+        <div>
+            <img src="images/salon-3.jpg" alt="">
+        </div>
     </div>
 </div>
+
 
 
 <?php
