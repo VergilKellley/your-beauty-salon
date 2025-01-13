@@ -116,7 +116,7 @@ header {
 
 .content {
     position: relative;
-    max-width: 550px;
+    /* max-width: 550px; */
     display: none;
     visibility: hidden;
     transform: scale(0);
@@ -212,26 +212,22 @@ header {
 .carousel {
     position: relative;
     height: 450px;
-    /* height: 550px; */
-    /* perspective: 650px; */
     perspective: 1500px;
 }
 
 .carousel .carousel-item {
-    width: 450px;
-    /* width: 250px; */
+    width: auto;
+    height: 400px;
     cursor: pointer;
 }
 
 .carousel .carousel-item img {
-    max-width:435px;
-    /* max-width: 235px; */
+    max-width: 235px;
     border-radius: 10px;
-    transform: translateX(8px) translateY(-10px);
-    /* transform: translateX(8px) translateY(-100px); */
+    transform: translateX(0px) translateY(-100px);
     object-fit: cover;
     object-position: center;
-    margin-top: -36px;
+    margin-top: 100px;
 }
 
 .play {
@@ -324,4 +320,78 @@ header {
     max-width: 60px;
     padding: 4px 10px 6px;
     border-radius: 5px;
+}
+
+.mobile-content-container {
+    display:flex;
+}
+
+.salon-title, .sci {
+    display: none;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1340px){
+    .banner {
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .mobile-content-container {
+        flex-direction:column;
+        max-width: 80vw;
+    }
+
+    /* .banner .carousel-box {
+        min-width: 950px;
+    } */
+
+    .carousel {
+        perspective: 900px;
+    }
+
+    .carousel .carousel-item img {
+        max-width: 300px;
+    }
+
+    .service-description-container {
+        margin: 100px 0 50px;
+    }
+
+    .service-description-container {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1195px) {
+    .banner .carousel-box {
+        min-width:500px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-content-container {
+        max-width: 0vw;
+        min-width: 100vw;
+    }
+
+    .content.active {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .banner .carousel-box {
+        min-width:300px;
+    }
+
+    .carousel {
+        perspective: 500px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .carousel .carousel-item img {
+        max-width: 250px;
+    }
 }
