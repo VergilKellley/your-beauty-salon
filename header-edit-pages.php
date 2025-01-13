@@ -10,7 +10,7 @@
         require_once 'backend/db.php';
         require_once 'backend/display_contact_info.php';
         require_once 'backend/display_index_page_welcome_to.php';
-        require_once 'backend/display_popular_services.php';
+        // require_once 'backend/display_popular_services.php';
         require_once 'backend/display_website_colors.php';
         require_once 'backend/display_landing_page_images.php';
     }
@@ -41,13 +41,16 @@
                     <a href="index">HOME</a>
                 </li>
                 <li>
-                    <a href="edit-website">EDIT WEBSITE</a>
+                    <a href="edit-website">EDIT HOMEPAGE</a>
                 </li>
                 <li>
-                    <a href="edit-home-page-images">HOME PAGE IMAGES</a>
+                    <a href="edit-home-page-images">HOMEPAGE IMAGES</a>
                 </li>
                 <li>
                     <a href="edit-photo-gallery">PHOTO GALLERY</a>
+                </li>
+                <li>
+                    <a href="services-chosen">SERVICES</a>
                 </li>
                 <li>
                     <a href="stylist-info">STYLIST</a>
