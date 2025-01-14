@@ -217,7 +217,8 @@ header {
 
 .carousel .carousel-item {
     width: auto;
-    height: 400px;
+    height: auto;
+    /* height: 400px; */
     cursor: pointer;
 }
 
@@ -227,7 +228,7 @@ header {
     transform: translateX(0px) translateY(-100px);
     object-fit: cover;
     object-position: center;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .play {
@@ -391,7 +392,15 @@ header {
 }
 
 @media screen and (max-width: 350px) {
+    .carousel {
+        height: 350px;
+    }
+
     .carousel .carousel-item img {
-        max-width: 250px;
+        margin-top:200px;
+    }
+    .carousel .carousel-item img {
+        max-width: 200px;
+        /* max-width: 250px; */
     }
 }
