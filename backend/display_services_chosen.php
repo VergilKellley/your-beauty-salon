@@ -11,8 +11,6 @@ if ($resultCheck > 0) {
         $services_description = $row['services_description'];
         $service_img = $row['service_img'];
         $service_img_desc = $row['service_img_desc'];
-        $service_video = $row['service_video'];
-
-
+        // $service_video = $row['service_video'];
     }
 }
