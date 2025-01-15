@@ -42,6 +42,7 @@
 
             <?php while ($chosen_services = mysqli_fetch_assoc($chosen_services_info)) : ?>
             <div class="content <?= $chosen_services['id'] ?>">
+                
                 <img src="images/salon-logo.png" alt="" class="salon-title">
                 <h4>
                     <span><?= $chosen_services['service_title'] ?></span><span>$<?= $chosen_services['service_price'] ?></span><span><?= $chosen_services['service_time'] ?>
@@ -49,8 +50,10 @@
                 </h4>
                 <p><?= $chosen_services['services_description'] ?></p>
                 <div>
+                
                     <a style="position: relative;display: inline-block;margin-right: 10px;background: var(--primary);color: #fff;padding: 6px 20px;text-decoration: none;font-weight: 500;letter-spacing: 1px;text-transform: uppercase;transition: 0.5s;cursor: pointer;"
                         href="book-appointment">Book Now</a>
+                        
                     <!-- <a href=""><i class="fa-solid fa-play">Learn More</i></a>
                 <a href=""><i class="fa-solid fa-plus">More</i></a> -->
                 </div>
@@ -70,6 +73,7 @@
                     ?>
 
                         <?php while ($chosen_services = mysqli_fetch_assoc      ($chosen_services_info)) : ?>
+                            
                         <div class="carousel-item"
                             onclick="changeBg('<?= $chosen_services['service_img'] ?>', '<?= $chosen_services['id'] ?>')">
                             <img src="images/<?= $chosen_services['service_img'] ?>" alt="">
