@@ -228,7 +228,7 @@ header {
     transform: translateX(0px) translateY(-100px);
     object-fit: cover;
     object-position: center;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .play {
@@ -347,12 +347,16 @@ header {
         min-width: 950px;
     } */
 
+    .carousel .carousel-item img {
+        margin-top: 220px;
+    }
+
     .carousel {
         perspective: 900px;
     }
 
     .carousel .carousel-item img {
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .service-description-container {
@@ -396,11 +400,14 @@ header {
         height: 350px;
     }
 
+    .carousel .carousel-item img
+
     .carousel .carousel-item img {
-        margin-top:200px;
+        margin-top:280px;
+        height: 200px;
     }
-    .carousel .carousel-item img {
-        max-width: 200px;
-        /* max-width: 250px; */
+
+    .banner .carousel-box {
+        height: 300px;
     }
 }
