@@ -403,11 +403,11 @@ header {
     .carousel .carousel-item img
 
     .carousel .carousel-item img {
-        margin-top:280px;
-        height: 200px;
+        margin-top:230px;
+        height: 150px;
     }
 
     .banner .carousel-box {
-        height: 300px;
+        height: 250px;
     }
 }
