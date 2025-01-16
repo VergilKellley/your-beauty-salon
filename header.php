@@ -106,7 +106,6 @@
                     <li style="display:inline-block;padding:1rem"><a href="all-services">SERVICES</a></li>
                     <li style="display:inline-block;padding:1rem"><a href="photo-gallery">GALLERY</a></li>
                     <li style="display:inline-block;padding:1rem"><a href="about">ABOUT</a></li>
-
                     <li style="display:inline-block;padding:1rem"><a href="edit-website">EDIT WEBSITE</a></li>
                     <li style="display:inline-block;padding:1rem"><a href="logout">LOGOUT</a></li>
                 </ul>
