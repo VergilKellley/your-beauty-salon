@@ -60,8 +60,8 @@ require 'backend/display_contact_info.php';
             <div style="display:flex;justify-content:center;gap:10px">
                 <a style="color:#333;text-decoration:none" href="index"><span
                         style="color:<?= $accent_color ?>">HOME</span></a>
-                <a style="color:#333;text-decoration:none" href="#"><span
-                        style="color:<?= $accent_color ?>">BOOK NOW</span></a>
+                <!-- <a style="color:#333;text-decoration:none" href="#"><span
+                        style="color:<?= $accent_color ?>">BOOK NOW</span></a> -->
                 <a style="color:#333;text-decoration:none" href="all-services"><span
                         style="color:<?= $accent_color ?>">SERVICES</span></a>
                 <a style="color:#333;text-decoration:none" href="photo-gallery"><span
