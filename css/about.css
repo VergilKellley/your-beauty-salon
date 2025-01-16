@@ -224,6 +224,10 @@ div ul li a {
         position: relative !important;
         width: 80%;
     }
+
+    .text-under-large-image {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 440px) {
