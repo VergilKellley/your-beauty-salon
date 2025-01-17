@@ -18,9 +18,9 @@
             <div class="img-and-large-text">
                 <div class="large-img-container" style="width: 70%; position:relative">
                     <img class="about-img-1" style="z-index:3; position:absolute; bottom:0"
-                        src="images/pink-shirt-hand-on-chin.png" alt="" />
+                        src="images/<?= $about_img_2 ?>" alt="<?= $about_img_desc_2 ?>" />
                     <img class="about-img-2" style="position: absolute; left: -20px; z-index: 2;bottom:0"
-                        src="bkgd-images/brown-powder-makeup.png" alt="" />
+                        src="bkgd-images/<?= $about_img_1 ?>" alt="<?= $about_img_desc_1 ?>" />
                 </div>
                 <div class="our-story-container" style="width: 55%;">
                     <p>Our Story</p>
