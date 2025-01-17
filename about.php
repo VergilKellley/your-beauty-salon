@@ -5,14 +5,11 @@
 <div class="about-header">
     <div style="position:absolute;top:75px; bottom:0; right:0; left:0;background:#000; opacity:.5;height:100%"></div>
     <div style="position:absolute;max-width:700px;width: 100vw;padding: 0 20px; color:#fff">
-        <h2 style="position:relative;z-index:3">Style & Elegance</h2>
-        <p style="margin-top:20px;line-height:1.5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
-            expedita corporis unde illo iure
-            officia rem consequuntur doloremque tempore, ab fugit at odio veniam? Eius debitis assumenda pariatur.
-            At, doloribus.</p>
+        <h2 style="position:relative;z-index:3"><?= $about_header_title ?></h2>
+        <p style="margin-top:20px;line-height:1.5"><?= $about_header_text ?></p>
     </div>
     <div
-        style="background:url('images/glamorous-woman.jpg');background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;">
+        style="background:url('images/<?= $about_header_img ?>');background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;">
     </div>
 </div>
 <div class="about-section">
