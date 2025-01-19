@@ -23,24 +23,15 @@
                         src="bkgd-images/<?= $about_img_1 ?>" alt="<?= $about_img_desc_1 ?>" />
                 </div>
                 <div class="our-story-container" style="width: 55%;">
-                    <p>Our Story</p>
-                    <h1 style="position:relative;z-index: 4;">SALON</h1>
+                    <p><?= $our_story_title ?></p>
+                    <h1 style="position:relative;z-index: 4;"><?= $our_story_large_title ?></h1>
                     <div class="two-para-text">
-                        <p style="border-left:8px solid red;padding-left:10px">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Recusandae id voluptates iure consequuntur optio excepturi ut
-                            non dolores vel totam! Reprehenderit in ratione rerum quam.
-                        </p>
+                        <p style="border-left:8px solid red;padding-left:10px"><?= $our_story_paragraph_1 ?></p>
                         <br />
-                        <p style="border-left:8px solid red;padding-left:10px">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Accusamus totam architecto porro adipisci officia aliquam nemo
-                            in accusantium, quis numquam recusandae doloremque reiciendis
-                            odio voluptatibus ea, eius enim. Molestias, impedit.
-                        </p>
+                        <p style="border-left:8px solid red;padding-left:10px"><?= $our_story_paragraph_2 ?></p>
                         <br />
                         <p>
-                            <span style="font-style: italic; font-weight: 600">Margaret Olsen - owner</span>
+                            <span style="font-style: italic; font-weight: 600"><?= $about_owner_name ?></span>
                         </p>
                     </div>
                     <div class="book-now-view-services-btn-container"
@@ -54,14 +45,13 @@
         <div class="img-and-text-content">
             <div class="text-under-large-image">
                 <div>
-                    <div>
+                    <!-- <div>
                         <p>Luxuriously Simple</p>
                         <p>Naurally Potent</p>
-                    </div>
+                    </div> -->
                     <div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-                            odio corporis. Commodi.
+                            <?= $about_text_under_image ?>
                         </p>
                     </div>
                 </div>
@@ -70,21 +60,17 @@
         <div class="core-values-container" style="display:flex;width:100%;margin-top:100px;padding-bottom:50px">
             <div style="display:flex">
                 <div style="min-width:300px;">
-                    <h3>Core Values</h3>
+                    <h3><?= $core_values_title ?></h3>
                     <br>
                     <div style="border-left:8px solid red;padding-left:10px">
-                        <h2>Excellence</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos tenetur asperiores quam
-                            praesentium unde maiores nesciunt autem odit modi laboriosam ut atque sit eaque voluptatem
-                            perspiciatis esse, quaerat at id facere nihil dolores, earum reiciendis.</p>
+                        <h2><?= $core_values_large_title_1 ?></h2>
+                        <p><?= $core_values_large_title_text_1 ?></p>
                     </div>
 
                     <br>
                     <div style="border-left:8px solid red;padding-left:10px">
-                        <h2>Tradition</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos tenetur asperiores quam
-                            praesentium unde maiores nesciunt autem odit modi laboriosam ut atque sit eaque voluptatem
-                            perspiciatis esse, quaerat at id facere nihil dolores, earum reiciendis.</p>
+                        <h2><?= $core_values_title_2 ?></h2>
+                        <p><?= $core_values_large_title_text_2 ?></p>
                     </div>
                 </div>
             </div>
@@ -94,7 +80,7 @@
     </div>
     <div style="background:white">
         <div>
-            <img src="images/salon-3.jpg" alt="">
+            <img src="images/<?= $core_values_img ?>" alt="<?= $core_values_img_desc ?>">
         </div>
     </div>
 </div>
