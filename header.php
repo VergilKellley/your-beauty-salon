@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once 'backend/db.php';
-    // require_once 'backend/display_contact_info.php';
+    require_once 'backend/display_about_page.php';
     require_once 'backend/display_business_address.php';
     require_once 'backend/display_contact_info.php';
     require_once 'backend/display_index_page_welcome_to.php';
@@ -106,7 +106,7 @@
                     <li style="display:inline-block;padding:1rem"><a href="all-services">SERVICES</a></li>
                     <li style="display:inline-block;padding:1rem"><a href="photo-gallery">GALLERY</a></li>
                     <li style="display:inline-block;padding:1rem"><a href="about">ABOUT</a></li>
-                    <li style="display:inline-block;padding:1rem"><a href="edit-website">EDIT WEBSITE</a></li>
+                    <li style="display:inline-block;padding:1rem"><a href="edit-homepage">HOMEPAGE</a></li>
                     <li style="display:inline-block;padding:1rem"><a href="logout">LOGOUT</a></li>
                 </ul>
                 <?php endif; ?>
