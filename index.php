@@ -105,22 +105,24 @@ require 'header.php';
 
         <div style="position:absolute;top:0; bottom:0; right:0; left:0;background:#000; opacity:.5"></div>
         <div class="rotating-imgs-text" style="">
-            <h2 style="position:relative;z-index:3;padding-top: 30px;">Pamper Yourself</h2>
-            <p style="margin:20px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <h2 style="position:relative;z-index:3;padding-top: 30px;"><?= $rotating_imgs_title ?></h2>
+            <!-- <h2 style="position:relative;z-index:3;padding-top: 30px;">Pamper Yourself</h2> -->
+            <p style="margin:20px 0;"><?= $rotating_imgs_text ?></p>
+            <!-- <p style="margin:20px 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptate optio amet explicabo velit dolor iusto saepe vel, quod ex eligendi omnis magnam incidunt
-                cupiditate ipsa.</p>
+                cupiditate ipsa.</p> -->
 
 
             <div class="reviews-slider-container">
                 <div class="reviews-box rotating-imgs-container">
-                    <span style="--i:1;"><img src="images/09.jpg" alt=""></span>
-                    <span style="--i:2;"><img src="images/02.jpg" alt=""></span>
-                    <span style="--i:3;"><img src="images/03.jpg" alt=""></span>
-                    <span style="--i:4;"><img src="images/04.jpg" alt=""></span>
-                    <span style="--i:5;"><img src="images/05.jpg" alt=""></span>
-                    <span style="--i:6;"><img src="images/06.jpg" alt=""></span>
-                    <span style="--i:7;"><img src="images/07.jpg" alt=""></span>
-                    <span style="--i:8;"><img src="images/08.jpg" alt=""></span>
+                <span style="--i:1;"><img src="images/<?= $rotating_imgs_1 ?>" alt="<?= $rotating_imgs_1_desc ?>"></span>
+                    <span style="--i:2;"><img src="images/<?= $rotating_imgs_2 ?>" alt="<?= $rotating_imgs_2_desc ?>"></span>
+                    <span style="--i:3;"><img src="images/<?= $rotating_imgs_3 ?>" alt="<?= $rotating_imgs_3_desc ?>"></span>
+                    <span style="--i:4;"><img src="images/<?= $rotating_imgs_4 ?>" alt="<?= $rotating_imgs_4_desc ?>"></span>
+                    <span style="--i:5;"><img src="images/<?= $rotating_imgs_5 ?>" alt="<?= $rotating_imgs_5_desc ?>"></span>
+                    <span style="--i:6;"><img src="images/<?= $rotating_imgs_6 ?>" alt="<?= $rotating_imgs_6_desc ?>"></span>
+                    <span style="--i:7;"><img src="images/<?= $rotating_imgs_7 ?>" alt="<?= $rotating_imgs_7_desc ?>"></span>
+                    <span style="--i:8;"><img src="images/<?= $rotating_imgs_8 ?>" alt="<?= $rotating_imgs_8_desc ?>"></span>
                 </div>
             </div>
             <div class="rotating-imgs-view-gallery-btn"
@@ -128,10 +130,7 @@ require 'header.php';
                 <a style="background:black;color:white; opacity:.8" class="btn sec-two-btn" href="photo-gallery">GALLERY</a>
             </div>
         </div>
-            <img style="background-attachment:fixed;background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;" src="images/<?= $para_three_img ?>" alt="">
-        <!-- <div
-            style="background:url('images/<?= $para_three_img ?>');background-attachment:fixed;background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;margin-top:60px">
-        </div> -->
+            <img style="background-attachment:fixed;background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;" src="images/<?= $rotating_imgs_bkgd_img ?>" alt="<?= $rotating_imgs_bkgd_img_desc ?>">
     </div>
 
 
@@ -140,7 +139,8 @@ require 'header.php';
 
     <section class="stylist-section" style="display:flex;justify-content: center;
     align-items: center;position: relative;background:black">
-    <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/stylist-card-bkgd-1.jpg" alt="">
+    <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/<?= $reviews_bkgd_img ?>" alt="<?= $reviews_bkgd_img_desc ?>">
+    <!-- <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/stylist-card-bkgd-1.jpg" alt=""> -->
         <div class="stylist-container swiper">
             <div class="stylist-slider-container">
                 <h2 style="text-align: center;margin:50px 0 20px;color:#fff"><?= $reviews_title ?></h2>
@@ -213,7 +213,7 @@ require 'header.php';
     </section>
 
 
-    <!-- POPULAR SERVICES -->
+    <!-- SERVICES -->
 
     <div class="popular-services" style="text-align: left;">
 
@@ -222,27 +222,19 @@ require 'header.php';
                 <div>
                     <img class="our-services-left-img"
                         style="width:200px;height:auto;position:absolute;z-index:9;top:50px;left:-20px;margin-top:-40px"
-                        src="bkgd-images/makeup-cups.png" alt="">
-                    <p style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:red;text-underline-offset:8px">OUR SERVICES</p>
+                        src="bkgd-images/<?= $left_services_img ?>" alt="<?= $left_services_img_desc ?>">
+                    <h3 style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:red;text-underline-offset:8px"><?= $our_services_title ?></h3>
                     <img class="our-services-right-img"
                         style="width:150px;height:auto;position:absolute;z-index:9;top:-40px;right:20px;margin-top:60px"
-                        src="bkgd-images/nail-polish.png" alt="">
-                    <p class="our-services-2nd-p-tag">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Et optio cumque
-                        porro dolorum qui, assumenda exercitationem at dolor recusandae eligendi soluta ducimus in
-                        libero corporis architecto deserunt officiis laborum facilis facere, fuga mollitia nostrum!
-                        Eaque commodi fuga ex odio delectus!</p>
-                </div>
-
-                <!-- <p style="color:#fff; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;">
-                    <?= $service_title ?></p> -->
+                        src="bkgd-images/<?= $right_services_img ?>" alt="<?= $right_services_img_desc ?>">
+                    <p class="our-services-2nd-p-tag"><?= $our_services_text ?></p>
+                </div> 
             </div>
 
 
 
             <div class="services-containers">
                 <div class="service-container">
-
                     <?php
                             $chosen_services_query = 'SELECT * FROM services_chosen LIMIT 6';
                             $chosen_services_info = mysqli_query($conn, $chosen_services_query);
@@ -269,12 +261,10 @@ require 'header.php';
 
 
         <section class="stylist-section" style="background:black">
-            <img style="position:absolute;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/stylist-card-bkgd-1.jpg" alt="">
-        <!-- <section class="stylist-section"
-            style="background-image:url(images/stylist-card-bkgd-1.jpg);background-attachment:fixed; background-repeat: no-repeat;"> -->
+            <img style="position:absolute;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/<?= $stylist_bkgd_img ?>" alt="<?= $stylist_bkgd_img_desc ?>">
             <div class="stylist-container swiper">
                 <div class="stylist-slider-container">
-                    <h2 style="text-align: center;margin-bottom: 20px;color:#fff">OUR STYLISTS</h2>
+                    <h2 style="text-align: center;margin-bottom: 20px;color:#fff"><?= $our_stylist_title ?></h2>
                     <div class="stylist-card-wrapper swiper-wrapper">
 
                         <?php
@@ -303,107 +293,6 @@ require 'header.php';
         <?php
             require_once 'contact.php';
         ?>
-
-        <!-- CONTACT -->
-        <!-- <section id="contact" class="contact">
-            <h1 style="color:#F40212">SALON</h1>
-            <div class="contact-content">
-                <h2><?= $contact_page_title ?></h2>
-                
-            </div>
-            <div class="contact-container">
-                <div class="contactInfo">
-                    <div class="contact-box">
-                        <div class="contact-icon"><b></b><i class="fa-solid fa-location-pin"></i></div>
-                        <div class="text">
-                            <h3>Address</h3>
-                            <p><?= $street_number ?><span> </span><?= $street_name ?><br><?= $city_name ?>,
-                                <?= $state_name ?>,<br><?= $zip_code ?></p>
-                        </div>
-                    </div>
-                    <div class="contact-box">
-                        
-                        <div class="contact-icon"><b></b><i class="fa-solid fa-phone"></i></div>
-                        <div class="text">
-                            <h3>Phone</h3>
-                            <p><?= $phone ?></p>
-                        </div>
-                    </div>
-                    <div class="contact-box">
-                        <div class="contact-icon"><b></b><i class="fa-solid fa-envelope"></i></div>
-                        <div class="text">
-                            <h3>Email</h3>
-                            <p><?= $email ?></p>
-                        </div>
-                    </div>
-                    <div style="display:flex;flex-direction:column">
-                        <h2 class="txt">Connect with us</h2>
-                        <ul class="sci">
-                            <li><a href="<?= $facebook ?>" target="_blank" rel="noreferrer noopener"><i
-                                        class="fa-brands fa-facebook-f"></i></a></li>
-
-                            <li><a href="<?= $instagram ?>" target="_blank" rel="noreferrer noopener"><i
-                                        class="fa-brands fa-instagram"></i></a></li>
-
-                            <li><a href="<?= $tiktok ?>" target="_blank" rel="noreferrer noopener"><i
-                                        class="fa-brands fa-tiktok"></i></a></li>
-
-                            <li><a href="<?= $linkedin ?>" target="_blank" rel="noreferrer noopener"><i
-                                        class="fa-brands fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="map-and-message-container">
-                    <div style="width:30vw" id='google-map' class="map">
-                        <iframe src="<?= $google_map_url ?>" style="border:0; width:100%; height: 426px; padding:20px"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-
-                    <div class="contactForm">
-                        <form action="backend/add_contact_form_message.php" method="post">
-                            <h2>Send Message</h2>
-                            <div class="inputBox">
-                                <input type="text" name="contact_form_name" required="required">
-                                <span>Full Name</span>
-                            </div>
-                            <div class="inputBox">
-                                <input type="phone" name="contact_form_phone" required="required">
-                                <span>Phone</span>
-                            </div>
-                            <div class="inputBox">
-                                <input type="email" name="contact_form_email" required="required">
-                                <span>Email</span>
-                            </div>
-                            <div class="inputBox">
-                                <textarea name="contact_form_message" id="" required="required"></textarea>
-                                <span>Type your message...</span>
-                            </div>
-                            <div class="inputBox">
-                                <button class="contact-form-send-btn" type="submit"
-                                    name="submit_contact_form">SEND</button>
-                                
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-
-        <footer style='background:#000; position:relative; z-index:9999999999;'>
-            <div class="fbox">
-                Copyright &copy; 2024 <?= $business_name; ?> | Website designed and powered by
-                <a style='color:#fff; text-decoration:none' href="https://webqwick.com/"
-                    target='_blank'>WebQwick.com</a>.
-            </div>
-            <div>
-                All other trademarks, service marks and trade names referenced in this
-                material are the property of their respective owner.
-            </div>
-        </footer> -->
-
 
         <!-- FADE IMAGE -->
         <script src="js/image-fade.js"></script>
