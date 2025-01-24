@@ -20,7 +20,7 @@ require 'header.php';
 
 ?>
 
-<section id="header-section">
+<section style="background:<?= $main_color ?>" id="header-section">
     <div class="container">
         <div class="col c-1">
             <div class="item"><img src="./assets/<?= $landing_page_img_1 ?>" alt="<?= $landing_page_img_1_desc ?>">
@@ -127,7 +127,7 @@ require 'header.php';
             </div>
             <div class="rotating-imgs-view-gallery-btn"
                 style=" display: flex; justify-content: center;">
-                <a style="background:black;color:white; opacity:.8" class="btn sec-two-btn" href="photo-gallery">GALLERY</a>
+                <a style="background:<?= $secondary_color ?>;color:white;" class="btn sec-two-btn" href="photo-gallery">GALLERY</a>
             </div>
         </div>
             <img style="background-attachment:fixed;background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;" src="images/<?= $rotating_imgs_bkgd_img ?>" alt="<?= $rotating_imgs_bkgd_img_desc ?>">
@@ -215,15 +215,15 @@ require 'header.php';
 
     <!-- SERVICES -->
 
-    <div class="popular-services" style="text-align: left;">
+    <div style="background:white" class="popular-services" style="text-align: left;">
 
-        <div class="popular-services-container">
+        <div style="background:white;border:2px solid <?= $main_color ?>" class="popular-services-container">
             <div class="popular-services-text-and-imgs-container" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
                 <div>
                     <img class="our-services-left-img"
                         style="width:200px;height:auto;position:absolute;z-index:9;top:50px;left:-20px;margin-top:-40px"
                         src="bkgd-images/<?= $left_services_img ?>" alt="<?= $left_services_img_desc ?>">
-                    <h3 style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:red;text-underline-offset:8px"><?= $our_services_title ?></h3>
+                    <h3 style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:<?= $main_color ?>;text-underline-offset:15px"><?= $our_services_title ?></h3>
                     <img class="our-services-right-img"
                         style="width:150px;height:auto;position:absolute;z-index:9;top:-40px;right:20px;margin-top:60px"
                         src="bkgd-images/<?= $right_services_img ?>" alt="<?= $right_services_img_desc ?>">
@@ -242,8 +242,8 @@ require 'header.php';
 
                     <?php while ($chosen_services = mysqli_fetch_assoc($chosen_services_info)) : ?>
 
-                    <div>
-                        <img style="max-height:400px;  border-top-left-radius: 50px; border-bottom-right-radius: 50px;"
+                    <div style="background:<?= $main_color ?>">
+                        <img style="max-height:400px;   border-top-left-radius: 50px; border-bottom-right-radius: 50px;"
                             src="images/<?= $chosen_services['service_img'] ?>"
                             alt="<?= $chosen_services['service_img_desc'] ?>">
                         <h2 style="margin-top:20px"><?= $chosen_services['service_title'] ?></h2>
@@ -254,7 +254,7 @@ require 'header.php';
             </div>
             <div class="popular-services-btn"
                 style="margin:2rem 0 6rem; width:100%; display: flex; justify-content: center;">
-                <a style="background:black;color:white" class="btn" href="all-services">VIEW SERVICES</a>
+                <a style="background:<?= $secondary_color ?>;color:white" class="btn" href="all-services">VIEW SERVICES</a>
             </div>
         </div>
 
