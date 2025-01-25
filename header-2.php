@@ -100,19 +100,19 @@ require_once 'backend/display_website_colors.php';
 
 <body>
     <div>
-    <nav class="mobile-nav-index" style="position:fixed;z-index:99999999999;background:#000;top:0">
-        <div style="padding 0 20px" class="mobile-header">
-            <div class="mobile-navbar">
+    <nav class="mobile-nav-index" style="position:fixed;z-index:99999999999;background:<?= $main_color ?>;top:0">
+        <div style="padding 0 20px; height:100%" class="mobile-header">
+            <div style="height:100%" class="mobile-navbar">
                 <?php if (!isset($user)): ?>
                 <div class="mobile-nav-logo">
-                    <h1 style="font-size: 2.5rem; margin:0 !important">SALON</h1>
+                    <h1 style="font-size: 2rem; margin-top:1.8rem !important">SALON</h1>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-                <ul style="background:rgba(0,0,0,.8)" class="mobile-nav-menu">
+                <ul style="background:<?= $main_color ?>" class="mobile-nav-menu">
                     <li style=""><a href="index">HOME</a></li>
                     <li style=""><a href="book-appointment">BOOK NOW</a></li>
                     <li style=""><a href="all-services">SERVICES</a></li>
@@ -121,14 +121,14 @@ require_once 'backend/display_website_colors.php';
                 </ul>
                 <?php elseif (isset($user)): ?>
                 <div class="mobile-nav-logo">
-                    <h1 style="font-size: 2.5rem">SALON</h1>
+                    <h1 style="font-size: 2rem; margin-top:1.8rem !important">SALON</h1>
                 </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
-                <ul style="background:rgba(0,0,0,.8)" class="mobile-nav-menu">
+                <ul style="background:<?= $main_color ?>" class="mobile-nav-menu">
                     <li style=""><a href="index">HOME</a></li>
                     <li style=""><a href="book-appointment">BOOK NOW</a></li>
                     <li style=""><a href="all-services">SERVICES</a></li>
@@ -141,50 +141,6 @@ require_once 'backend/display_website_colors.php';
             </div>
         </div>
     </nav>
-    <!-- <div class="content"> -->
-        <!-- <nav style="display:flex;background:#000;align-items:center;position:fixed">
-            <?php if (!isset($user)): ?>
-            <div class="nav-item">
-                <a href="index" id="active">HOME<a>
-            </div>
-            <div class="nav-item">
-                <a href="book-appointment" id="active">BOOK NOW<a>
-            </div>
-            <div class="nav-item">
-                <a href="all-services">SERVICES<a>
-            </div>
-            <div class="nav-item">
-                <a href="photo-gallery">GALLERY<a>
-            </div>
-            <div class="nav-item">
-                <a href="about">ABOUT<a>
-            </div>
-            <div class="nav-item">
-                <a href="index#contact">CONTACT<a>
-            </div>
-            <?php elseif (isset($user)): ?>
-            <div class="nav-item">
-                <a href="book-appointment" id="active">BOOK NOW<a>
-            </div>
-            <div class="nav-item">
-                <a href="all-services">SERVICES<a>
-            </div>
-            <div class="nav-item">
-                <a href="photo-gallery">GALLERY<a>
-            </div>
-            <div class="nav-item">
-                <a href="about">ABOUT<a>
-            </div>
-            <div class="nav-item">
-                <a href="index#contact">CONTACT<a>
-            </div>
-            <div class="nav-item">
-                <a href="edit-website">EDIT WEBSITE<a>
-            </div>
-            <div class="nav-item">
-                <a href="logout">LOGOUT<a>
-            </div>
-            <?php endif; ?>
-            </nav> -->
+    
     </div>
     
