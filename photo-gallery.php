@@ -2,16 +2,6 @@
 require 'header.php';
 ?>
 
-<div style="display:flex; justify-content:center;">
-    <nav class="mobile-draggable-slider-nav">
-        <a href="index">HOME</a>
-        <a href="book-appointment">BOOK NOW</a>
-        <a href="all-services">SERVICES</a>
-        <a href="#">GALLERY</a>
-        <a href="about">ABOUT</a>
-        <a href="index#contact">CONTACT</a>
-    </nav>
-</div>
 <header>
     <!-- <a href="#back" id="showreel">Showreel</a> -->
 
