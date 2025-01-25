@@ -341,7 +341,7 @@ nav {
     border-radius: 5px; 
     padding: 10px;
     position:relative;
-    background:lightgrey; 
+    /* background:lightgrey;  */
     margin:100px auto;
     border-radius:100px;
     box-shadow:10px 20px 3px #666;
@@ -384,7 +384,7 @@ nav {
 }
 
 .service-container div {
-        background-color: #F40212;
+        /* background-color: #F40212; */
         /* box-shadow: 6px 6px 2px #f36169; */
         position: relative;
         padding: 10px;
@@ -534,9 +534,9 @@ nav {
     transition: 0.3s ease;
 }
 
-.stylist-container .swiperNav_btn:hover {
+/* .stylist-container .swiperNav_btn:hover {
     color: #F40212;
-}
+} */
 
 .stylist-container .swiper-pagination-bullet {
     height: 13px;
