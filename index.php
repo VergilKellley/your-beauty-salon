@@ -155,7 +155,7 @@ require 'header.php';
                             <h2><?= $reviewers_name_1 ?></h2>
                             <p><?= $reviewers_comments_1 ?></p>
                         </div>
-                        <a class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
                         <img style="position:absolute;height:150px;width:150px; top:-50px"
@@ -166,7 +166,7 @@ require 'header.php';
                             <h2><?= $reviewers_name_2 ?></h2>
                             <p><?= $reviewers_comments_2 ?></p>
                         </div>
-                        <a class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
                         <img style="position:absolute;height:150px;width:150px; top:-50px"
@@ -178,7 +178,7 @@ require 'header.php';
                             <p><?= $reviewers_comments_3 ?></p>
                         </div>
 
-                        <a class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
 
@@ -190,7 +190,7 @@ require 'header.php';
                             <h2><?= $reviewers_name_4 ?></h2>
                             <p><?= $reviewers_comments_4 ?></p>
                         </div>
-                        <a class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
                         <img style="position:absolute;height:150px;width:150px; top:-50px;"
@@ -202,7 +202,7 @@ require 'header.php';
                             <p><?= $reviewers_comments_5 ?></p>
                         </div>
 
-                        <a class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
                     </div>
                 </div>
                 <div class="swiper-button-next swiperNav_btn"></div>
@@ -223,7 +223,7 @@ require 'header.php';
                     <img class="our-services-left-img"
                         style="width:200px;height:auto;position:absolute;z-index:9;top:50px;left:-20px;margin-top:-40px"
                         src="bkgd-images/<?= $left_services_img ?>" alt="<?= $left_services_img_desc ?>">
-                    <h3 style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:<?= $main_color ?>;text-underline-offset:15px"><?= $our_services_title ?></h3>
+                    <h3 style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:<?= $secondary_color ?>;text-underline-offset:15px"><?= $our_services_title ?></h3>
                     <img class="our-services-right-img"
                         style="width:150px;height:auto;position:absolute;z-index:9;top:-40px;right:20px;margin-top:60px"
                         src="bkgd-images/<?= $right_services_img ?>" alt="<?= $right_services_img_desc ?>">
@@ -279,7 +279,7 @@ require 'header.php';
                             <img class="stylist-card-image" src="./images/<?= $stylist_info['stylist_img'] ?>" alt="">
                             <h2><?= $stylist_info['stylist_name'] ?></h2>
                             <p><?= $stylist_info['stylist_title'] ?></p>
-                            <a style="position:absolute;bottom:25px" class="btn" href="book-appointment">BOOK NOW</a>
+                            <a style="background:<?= $secondary_color ?>" style="position:absolute;margin-top:0" class="btn" href="book-appointment">BOOK NOW</a>
                         </div>
                         <?php endwhile ?>
                     </div>
