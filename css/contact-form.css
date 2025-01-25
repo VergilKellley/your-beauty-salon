@@ -30,7 +30,7 @@ nav .nav-item a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #000;
+    /* background: #000; */
     z-index: 2;
 }
 
@@ -76,7 +76,8 @@ nav .nav-item a {
     position: relative;
     min-width: 60px;
     height: 60px;
-    background: repeating-conic-gradient(from 27deg, #F40212 0%, #F40212 10%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from 27deg, white 0%, white 10%, transparent 10%, transparent 50%);
+    /* background: repeating-conic-gradient(from 27deg, #F40212 0%, #F40212 10%, transparent 10%, transparent 50%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +87,7 @@ nav .nav-item a {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-conic-gradient(from 117deg, #F40212 0%, #F40212 10%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from 117deg, white 0%, white 10%, transparent 10%, transparent 50%);
 }
 
 .contact-container .contactInfo .contact-box .contact-icon::after {
@@ -99,7 +100,7 @@ nav .nav-item a {
 .contact-container .contactInfo .contact-box .contact-icon b {
     position: absolute;
     inset: 8px;
-    background: #F40212;
+    /* background: #F40212; */
     z-index: 2;
 }
 
@@ -143,7 +144,7 @@ nav .nav-item a {
     color: #fff;
     margin-top: 50px;
     font-weight: 500;
-    border-left: 50px solid #F40212;
+    /* border-left: 50px solid #F40212; */
     padding-left: 10px;
     line-height: 1em;
 }
@@ -173,7 +174,7 @@ nav .nav-item a {
 .contact-container .contactForm {
     position: relative;
     width: 40%;
-    background: repeating-conic-gradient(from var(--a), #F40212 0%, #F40212 10%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from var(--a), white 0%, white 10%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
     padding: 60px;
 }
@@ -182,7 +183,7 @@ nav .nav-item a {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-conic-gradient(from var(--a), #F40212 0%, #F40212 10%, transparent 10%, transparent 50%);
+    background: repeating-conic-gradient(from var(--a), white 0%, white 10%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
     animation-delay: -1.5s;
 }
@@ -236,7 +237,7 @@ nav .nav-item a {
     margin: 10px 0;
     border: none;
     background: transparent;
-    border-bottom: 2px solid #F40212;
+    /* border-bottom: 2px solid #F40212; */
     color: #000;
     outline: none;
     resize: none;
