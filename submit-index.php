@@ -30,12 +30,12 @@ if ($stylist_name == ''){
     $_SESSION['check-date-selected'] = "Check your appointment date";
     // $_SESSION['select-your-service'] = "Select you service";
     //   header("location: index.php");
-      header("location: book_appointment_4.php");
+      header("location: book-appointment#closse-stylist-name-err-btn");
       exit();
-    }
+    } 
 // if ($_POST['stylist_name'] == NULL  || $_POST['stylist_name'] == 'No Technicians Available') {
     
-//     header('Location: book_appointment_4.php');
+//     header('Location: book-appointment');
 //     exit();
 // }
 
@@ -46,7 +46,7 @@ $messages = filter_var($_POST['messages'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 // if($_SERVER['REQUEST_METHOD'] != 'POST' || $_POST['stylist_name'] = '') {
 
-//     echo "<a href='book_appointment_4.php'><--Back</a>
+//     echo "<a href='book-appointment'><--Back</a>
 //             <br>
 //             Something went wrong. Try again or contact R and L Barbershop.";
 //     exit;
@@ -121,7 +121,7 @@ $messages = filter_var($_POST['messages'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
                            
 
-                            <a style="color: #333" href="book_appointment_4.php">
+                            <a style="color: #333" href="book-appointment">
                                 Previous Page </a>
                             <br>
                             <br>
