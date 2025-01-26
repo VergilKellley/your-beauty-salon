@@ -4,21 +4,28 @@ require 'db.php';
 
 // ABOUT HEADER IMG
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    exit("POST request method required");
-} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_about_header_img'])) {
-    $about_header_img_description = $_POST["about_header_img_description"];
+    header("location:../index");
+    exit();
+}    else if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_update_about_header_img'])) && (empty($_FILES["image"]["name"]))) {
+
+        $_SESSION["empty_header_img"] = 'Please choose an image.';
+        header("location: ../edit-about#header-img");
+        exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_about_header_img'])) {
+
+    $about_header_img_desc = filter_var($_POST['about_header_img_desc'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $fileName = $_FILES["image"]["name"];
 
     $ext = pathinfo($fileName, PATHINFO_EXTENSION);
     $allowedTypes = array("jpeg", "jpg", "png", "gif");
     $tempName = $_FILES["image"]["tmp_name"];
-    $targetPath = "../uploads/".$fileName;
+    $targetPath = "../images/".$fileName;
     if(in_array($ext, $allowedTypes)) {
         if (move_uploaded_file($tempName, $targetPath)) {
-            $query = "UPDATE about_page SET about_header_img = '$fileName', about_header_img_description = '$about_header_img_description'";
+            $query = "UPDATE about_page SET about_header_img = '$fileName', about_header_img_desc = '$about_header_img_desc'";
             if(mysqli_query($conn, $query)){
                 // echo "Your image has been uploaded";
-                header("Location: ../about.php#since");
+                header("Location: ../edit-about#header-img");
             } else {
                 echo "Image was not uploaded";
             }
@@ -30,24 +37,192 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     }
 }
 
-// SINCE YEAR AND PARAGRAPHS ONE AND TWO
+// HEADER IMAGE TITLE AND TEXT
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    exit("POST request method required");
-} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_about_paragraphs_and_since_year'])) {
-    $about_since_year = filter_var($_POST['about_since_year'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    // $about_since_year = filter_var($_POST['about_since_year'], FILTER_SANITIZE_NUMBER_INT);
-    $about_paragraph_one = filter_var($_POST['about_paragraph_one'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $about_paragraph_two = filter_var($_POST['about_paragraph_two'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    header("location:../index");
+    exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_about_header_title_and_text'])) {
 
-    $sql = "UPDATE about_page SET about_since_year = '$about_since_year', about_paragraph_one = '$about_paragraph_one', about_paragraph_two = '$about_paragraph_two'";
+    $about_header_title = filter_var($_POST['about_header_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $about_header_text = filter_var($_POST['about_header_text'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    // $about_since_year = filter_var($_POST['about_since_year'], FILTER_SANITIZE_NUMBER_INT);
+
+    $sql = "UPDATE about_page SET about_header_title = '$about_header_title', about_header_text = '$about_header_text'";
 
     $sql_result = mysqli_query($conn, $sql);
 
     if(!mysqli_errno($conn)) {
         // redirect to index.php
         // $_SESSION['color_updated'] = "Color updated successfully";
-        header('location: ../about.php#since');
+        header('location: ../edit-about#about-header-title-text');
         die();
+    }
+}
+
+// ABOUT BACKGROUND IMAGE
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("location:../index");
+    exit();
+}    else if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_update_about_bkgd_img'])) && (empty($_FILES["image"]["name"]))) {
+
+        $_SESSION["empty_bkgd_img"] = 'Please choose an image.';
+        header("location: ../edit-about#no-bkgd-img");
+        exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_about_bkgd_img'])) {
+
+    $about_img_desc_1 = filter_var($_POST['about_img_desc_1'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $fileName = $_FILES["image"]["name"];
+
+    $ext = pathinfo($fileName, PATHINFO_EXTENSION);
+    $allowedTypes = array("jpeg", "jpg", "png", "gif");
+    $tempName = $_FILES["image"]["tmp_name"];
+    $targetPath = "../bkgd-images/".$fileName;
+    if(in_array($ext, $allowedTypes)) {
+        if (move_uploaded_file($tempName, $targetPath)) {
+            $query = "UPDATE about_page SET about_img_1 = '$fileName', about_img_desc_1 = '$about_img_desc_1'";
+            if(mysqli_query($conn, $query)){
+                // echo "Your image has been uploaded";
+                header("Location: ../edit-about#bkgd-img");
+            } else {
+                echo "Image was not uploaded";
+            }
+        }else {
+            echo "File is not uploaded";
+        }
+    } else {
+        echo "File type not allowed";
+    }
+}
+
+// ABOUT FOREGROUND IMAGE
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("location:../index");
+    exit();
+}    else if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_update_foreground_img'])) && (empty($_FILES["image"]["name"]))) {
+
+        $_SESSION["empty_foreground_img"] = 'Please choose an image.';
+        header("location: ../edit-about#no-foreground-img");
+        exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_foreground_img'])) {
+
+    $about_img_desc_2 = filter_var($_POST['about_img_desc_2'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $fileName = $_FILES["image"]["name"];
+
+    $ext = pathinfo($fileName, PATHINFO_EXTENSION);
+    $allowedTypes = array("jpeg", "jpg", "png", "gif");
+    $tempName = $_FILES["image"]["tmp_name"];
+    $targetPath = "../images/".$fileName;
+    if(in_array($ext, $allowedTypes)) {
+        if (move_uploaded_file($tempName, $targetPath)) {
+            $query = "UPDATE about_page SET about_img_2 = '$fileName', about_img_desc_2 = '$about_img_desc_2'";
+            if(mysqli_query($conn, $query)){
+                // echo "Your image has been uploaded";
+                header("Location: ../edit-about#foreground-img");
+            } else {
+                echo "Image was not uploaded";
+            }
+        }else {
+            echo "File is not uploaded";
+        }
+    } else {
+        echo "File type not allowed";
+    }
+}
+
+// TEXT UNDER IMAGE
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("location:../index");
+    exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_text_under_image'])) {
+
+    $about_text_under_image = filter_var($_POST['about_text_under_image'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $sql = "UPDATE about_page SET about_text_under_image = '$about_text_under_image'";
+
+    $sql_result = mysqli_query($conn, $sql);
+
+    if(!mysqli_errno($conn)) {
+        header('location: ../edit-about#about_text_under_image');
+        die();
+    }
+}
+
+// OUR STORY
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("location:../index");
+    exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_our_story'])) {
+
+    $our_story_title = filter_var($_POST['our_story_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $our_story_large_title = filter_var($_POST['our_story_large_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $our_story_paragraph_1 = filter_var($_POST['our_story_paragraph_1'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $our_story_paragraph_2 = filter_var($_POST['our_story_paragraph_2'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $about_owner_name = filter_var($_POST['about_owner_name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $sql = "UPDATE about_page SET our_story_title = '$our_story_title', our_story_large_title = '$our_story_large_title', our_story_paragraph_1 = '$our_story_paragraph_1', our_story_paragraph_2 = '$our_story_paragraph_2', about_owner_name = '$about_owner_name'";
+
+    $sql_result = mysqli_query($conn, $sql);
+
+    if(!mysqli_errno($conn)) {
+        header('location: ../edit-about#our-story');
+        die();
+    }
+}
+
+// CORE VALUES
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("location:../index");
+    exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_core_values'])) {
+
+    $core_values_title = filter_var($_POST['core_values_title'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $core_values_large_title_1 = filter_var($_POST['core_values_large_title_1'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $core_values_large_title_text_1 = filter_var($_POST['core_values_large_title_text_1'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $core_values_title_2 = filter_var($_POST['core_values_title_2'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $core_values_large_title_text_2 = filter_var($_POST['core_values_large_title_text_2'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $sql = "UPDATE about_page SET core_values_title = '$core_values_title', core_values_large_title_1 = '$core_values_large_title_1', core_values_large_title_text_1 = '$core_values_large_title_text_1', core_values_title_2 = '$core_values_title_2', core_values_large_title_text_2 = '$core_values_large_title_text_2'";
+
+    $sql_result = mysqli_query($conn, $sql);
+
+    if(!mysqli_errno($conn)) {
+        header('location: ../edit-about#core-values');
+        die();
+    }
+}
+
+// CORE VALUES IMAGE
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("location:../index");
+    exit();
+}    else if ($_SERVER['REQUEST_METHOD'] == 'POST' && (isset($_POST['submit_update_core_values_img'])) && (empty($_FILES["image"]["name"]))) {
+
+        $_SESSION["empty_core_values_img"] = 'Please choose an image.';
+        header("location: ../edit-about#no-core-values-img");
+        exit();
+} elseif($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_update_core_values_img'])) {
+
+    $core_values_img_desc = filter_var($_POST['core_values_img_desc'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $fileName = $_FILES["image"]["name"];
+
+    $ext = pathinfo($fileName, PATHINFO_EXTENSION);
+    $allowedTypes = array("jpeg", "jpg", "png", "gif");
+    $tempName = $_FILES["image"]["tmp_name"];
+    $targetPath = "../images/".$fileName;
+    if(in_array($ext, $allowedTypes)) {
+        if (move_uploaded_file($tempName, $targetPath)) {
+            $query = "UPDATE about_page SET core_values_img = '$fileName', core_values_img_desc = '$core_values_img_desc'";
+            if(mysqli_query($conn, $query)){
+                // echo "Your image has been uploaded";
+                header("Location: ../edit-about#core-values-img");
+            } else {
+                echo "Image was not uploaded";
+            }
+        }else {
+            echo "File is not uploaded";
+        }
+    } else {
+        echo "File type not allowed";
     }
 }
 
@@ -262,10 +437,3 @@ if ($_FILES["image"]["error"] !== UPLOAD_ERR_OK) {
 if ($_FILES["image"]["size"] > 1048576) {
     exit("File too large (max 1MB)");
 }
-
-//else {
-//     // redirect to index.php
-//     $_SESSION_['color_not_updated'] = "Color not updated. Please try again. If problem persists, please contact your website administrator.";
-// header('location: index.php');
-// die();
-// }
