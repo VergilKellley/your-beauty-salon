@@ -82,15 +82,42 @@ require 'header.php';
             </div>
         </div>
     </div>
-    <div style="height:200px !important; width:200px !important; position:absolute; top:100px; display:block!important;z-index:9999999999999999999999999999999999999999999999999999"
-        class="content">
+    <div id="business-name"
+        style="position:absolute; display:block!important;z-index:999"
+        class="content active">
 
-        <div class="hero">
+        <div style="display:flex; justify-content:center; align-items:center" class="hero">
+            <div style="height:100%; width:100%" class="title">
+                <p id="header-business-name" style="height:100%; width:100%; color:<?= $secondary_color ?>" class="montserrat-alternates-semibold">
+                    <?= $business_name ?> </p>
 
-            <div class="title">
-                <p class="montserrat-alternates-semibold"><?= $business_name ?></p>
+                    <p><a id="header-phone" style="color:white;margin-top:10px;display:block;text-decoration:none" href="tel:<?= $business_phone ?>" href=""><?= $business_phone ?></a></p>
+
+                    <p><a id="header-address" style="color:white;margin-top:10px;display:block;text-decoration:none" href="#contact"><?= $street_number ?> <?= $street_name ?> <?= $city_name ?>
+                    <?= $state_name ?>, <?= $zip_code ?></a></p>
+                    
+                    <!-- <span ><a style="color:white;text-decoration:none;display:block"href="#contact"></a></span><span style="display:block;"></span> -->
             </div>
         </div>
+
+        <script>
+        let $businessName = $("#business-name");
+        setTimeout(function() {
+            $businessName.addClass("active");
+        }, 5000);
+        </script>
+        <!-- <script>
+        let $businessName = $("#business-name").removeClass("active");
+        setTimeout(function() {
+            $businessName.addClass("active");
+        }, 5000);
+        </script> -->
+        <script>
+        let $businessName = $("#business-name").removeClass("active");
+        setTimeout(function() {
+            $businessName.addClass("active");
+        }, 5000);
+        </script>
 
         <section id="top-footer">
             <div class="preview">
@@ -115,22 +142,31 @@ require 'header.php';
 
             <div class="reviews-slider-container">
                 <div class="reviews-box rotating-imgs-container">
-                <span style="--i:1;"><img src="images/<?= $rotating_imgs_1 ?>" alt="<?= $rotating_imgs_1_desc ?>"></span>
-                    <span style="--i:2;"><img src="images/<?= $rotating_imgs_2 ?>" alt="<?= $rotating_imgs_2_desc ?>"></span>
-                    <span style="--i:3;"><img src="images/<?= $rotating_imgs_3 ?>" alt="<?= $rotating_imgs_3_desc ?>"></span>
-                    <span style="--i:4;"><img src="images/<?= $rotating_imgs_4 ?>" alt="<?= $rotating_imgs_4_desc ?>"></span>
-                    <span style="--i:5;"><img src="images/<?= $rotating_imgs_5 ?>" alt="<?= $rotating_imgs_5_desc ?>"></span>
-                    <span style="--i:6;"><img src="images/<?= $rotating_imgs_6 ?>" alt="<?= $rotating_imgs_6_desc ?>"></span>
-                    <span style="--i:7;"><img src="images/<?= $rotating_imgs_7 ?>" alt="<?= $rotating_imgs_7_desc ?>"></span>
-                    <span style="--i:8;"><img src="images/<?= $rotating_imgs_8 ?>" alt="<?= $rotating_imgs_8_desc ?>"></span>
+                    <span style="--i:1;"><img src="images/<?= $rotating_imgs_1 ?>"
+                            alt="<?= $rotating_imgs_1_desc ?>"></span>
+                    <span style="--i:2;"><img src="images/<?= $rotating_imgs_2 ?>"
+                            alt="<?= $rotating_imgs_2_desc ?>"></span>
+                    <span style="--i:3;"><img src="images/<?= $rotating_imgs_3 ?>"
+                            alt="<?= $rotating_imgs_3_desc ?>"></span>
+                    <span style="--i:4;"><img src="images/<?= $rotating_imgs_4 ?>"
+                            alt="<?= $rotating_imgs_4_desc ?>"></span>
+                    <span style="--i:5;"><img src="images/<?= $rotating_imgs_5 ?>"
+                            alt="<?= $rotating_imgs_5_desc ?>"></span>
+                    <span style="--i:6;"><img src="images/<?= $rotating_imgs_6 ?>"
+                            alt="<?= $rotating_imgs_6_desc ?>"></span>
+                    <span style="--i:7;"><img src="images/<?= $rotating_imgs_7 ?>"
+                            alt="<?= $rotating_imgs_7_desc ?>"></span>
+                    <span style="--i:8;"><img src="images/<?= $rotating_imgs_8 ?>"
+                            alt="<?= $rotating_imgs_8_desc ?>"></span>
                 </div>
             </div>
-            <div class="rotating-imgs-view-gallery-btn"
-                style=" display: flex; justify-content: center;">
-                <a style="background:<?= $secondary_color ?>;color:white;" class="btn sec-two-btn" href="photo-gallery">GALLERY</a>
+            <div class="rotating-imgs-view-gallery-btn" style=" display: flex; justify-content: center;">
+                <a style="background:<?= $secondary_color ?>;color:white;" class="btn sec-two-btn"
+                    href="photo-gallery">GALLERY</a>
             </div>
         </div>
-            <img style="background-attachment:fixed;background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;" src="images/<?= $rotating_imgs_bkgd_img ?>" alt="<?= $rotating_imgs_bkgd_img_desc ?>">
+        <img style="background-attachment:fixed;background-repeat: no-repeat; background-position: center; background-size: cover;width:100vw;height:100vh; background-position:center;"
+            src="images/<?= $rotating_imgs_bkgd_img ?>" alt="<?= $rotating_imgs_bkgd_img_desc ?>">
     </div>
 
 
@@ -139,8 +175,9 @@ require 'header.php';
 
     <section class="stylist-section" style="display:flex;justify-content: center;
     align-items: center;position: relative;background:black">
-    <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/<?= $reviews_bkgd_img ?>" alt="<?= $reviews_bkgd_img_desc ?>">
-    <!-- <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/stylist-card-bkgd-1.jpg" alt=""> -->
+        <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center"
+            src="images/<?= $reviews_bkgd_img ?>" alt="<?= $reviews_bkgd_img_desc ?>">
+        <!-- <img style="position:absolute;top:0;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/stylist-card-bkgd-1.jpg" alt=""> -->
         <div class="stylist-container swiper">
             <div class="stylist-slider-container">
                 <h2 style="text-align: center;margin:50px 0 20px;color:#fff"><?= $reviews_title ?></h2>
@@ -155,7 +192,8 @@ require 'header.php';
                             <h2><?= $reviewers_name_1 ?></h2>
                             <p><?= $reviewers_comments_1 ?></p>
                         </div>
-                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn"
+                            href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
                         <img style="position:absolute;height:150px;width:150px; top:-50px"
@@ -166,7 +204,8 @@ require 'header.php';
                             <h2><?= $reviewers_name_2 ?></h2>
                             <p><?= $reviewers_comments_2 ?></p>
                         </div>
-                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn"
+                            href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
                         <img style="position:absolute;height:150px;width:150px; top:-50px"
@@ -178,7 +217,8 @@ require 'header.php';
                             <p><?= $reviewers_comments_3 ?></p>
                         </div>
 
-                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn"
+                            href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
 
@@ -190,7 +230,8 @@ require 'header.php';
                             <h2><?= $reviewers_name_4 ?></h2>
                             <p><?= $reviewers_comments_4 ?></p>
                         </div>
-                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn"
+                            href="book-appointment">BOOK NOW</a>
                     </div>
                     <div style="height:440px; position:relative" class="stylist-card swiper-slide">
                         <img style="position:absolute;height:150px;width:150px; top:-50px;"
@@ -202,7 +243,8 @@ require 'header.php';
                             <p><?= $reviewers_comments_5 ?></p>
                         </div>
 
-                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn" href="book-appointment">BOOK NOW</a>
+                        <a style="background:<?= $secondary_color ?>" class="btn reviews-btn"
+                            href="book-appointment">BOOK NOW</a>
                     </div>
                 </div>
                 <div class="swiper-button-next swiperNav_btn"></div>
@@ -218,17 +260,20 @@ require 'header.php';
     <div style="background:white" class="popular-services" style="text-align: left;">
 
         <div style="background:white;border:2px solid <?= $main_color ?>" class="popular-services-container">
-            <div class="popular-services-text-and-imgs-container" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <div class="popular-services-text-and-imgs-container"
+                style="display: flex; align-items: center; justify-content: center; gap: 10px;">
                 <div>
                     <img class="our-services-left-img"
                         style="width:200px;height:auto;position:absolute;z-index:9;top:50px;left:-20px;margin-top:-40px"
                         src="bkgd-images/<?= $left_services_img ?>" alt="<?= $left_services_img_desc ?>">
-                    <h3 style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:<?= $secondary_color ?>;text-underline-offset:15px"><?= $our_services_title ?></h3>
+                    <h3
+                        style="color:#000; text-align: center; font-size: 2rem; padding: 4rem 0 2rem;text-decoration:underline;text-decoration-color:<?= $secondary_color ?>;text-underline-offset:15px">
+                        <?= $our_services_title ?></h3>
                     <img class="our-services-right-img"
                         style="width:150px;height:auto;position:absolute;z-index:9;top:-40px;right:20px;margin-top:60px"
                         src="bkgd-images/<?= $right_services_img ?>" alt="<?= $right_services_img_desc ?>">
                     <p class="our-services-2nd-p-tag"><?= $our_services_text ?></p>
-                </div> 
+                </div>
             </div>
 
 
@@ -254,14 +299,16 @@ require 'header.php';
             </div>
             <div class="popular-services-btn"
                 style="margin:2rem 0 6rem; width:100%; display: flex; justify-content: center;">
-                <a style="background:<?= $secondary_color ?>;color:white" class="btn" href="all-services">VIEW SERVICES</a>
+                <a style="background:<?= $secondary_color ?>;color:white" class="btn" href="all-services">VIEW
+                    SERVICES</a>
             </div>
         </div>
 
 
 
         <section class="stylist-section" style="background:black">
-            <img style="position:absolute;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center" src="images/<?= $stylist_bkgd_img ?>" alt="<?= $stylist_bkgd_img_desc ?>">
+            <img style="position:absolute;background-attachment:fixed; background-repeat: no-repeat;width: 100%;height: 100vh;background-position: center"
+                src="images/<?= $stylist_bkgd_img ?>" alt="<?= $stylist_bkgd_img_desc ?>">
             <div class="stylist-container swiper">
                 <div class="stylist-slider-container">
                     <h2 style="text-align: center;margin-bottom: 20px;color:#fff"><?= $our_stylist_title ?></h2>
@@ -279,7 +326,8 @@ require 'header.php';
                             <img class="stylist-card-image" src="./images/<?= $stylist_info['stylist_img'] ?>" alt="">
                             <h2><?= $stylist_info['stylist_name'] ?></h2>
                             <p><?= $stylist_info['stylist_title'] ?></p>
-                            <a style="background:<?= $secondary_color ?>" style="position:absolute;margin-top:0" class="btn" href="book-appointment">BOOK NOW</a>
+                            <a style="background:<?= $secondary_color ?>" style="position:absolute;margin-top:0"
+                                class="btn" href="book-appointment">BOOK NOW</a>
                         </div>
                         <?php endwhile ?>
                     </div>
@@ -290,9 +338,11 @@ require 'header.php';
             </div>
         </section>
 
+        <div id="contact"></div>
         <?php
             require_once 'contact.php';
         ?>
+
 
         <!-- FADE IMAGE -->
         <script src="js/image-fade.js"></script>
@@ -323,45 +373,45 @@ require 'header.php';
         tl.to(".c-1 .item", {
             top: 0,
             stagger: 0.25,
-            duration: 3,
+            duration: 2.5,
             ease: "power4.inOut"
         }, "-=2");
 
         tl.to(".c-2 .item", {
             top: 0,
             stagger: -0.25,
-            duration: 3,
+            duration: 2.5,
             ease: "power4.inOut"
         }, "-=4");
 
         tl.to(".c-3 .item", {
             top: 0,
             stagger: 0.25,
-            duration: 3,
+            duration: 2.5,
             ease: "power4.inOut"
         }, "-=4");
 
         tl.to(".c-4 .item", {
             top: 0,
             stagger: -0.25,
-            duration: 3,
+            duration: 2.5,
             ease: "power4.inOut"
         }, "-=4");
 
         tl.to(".c-5 .item", {
             top: 0,
             stagger: 0.25,
-            duration: 3,
+            duration: 2.5,
             ease: "power4.inOut"
         }, "-=4");
 
         tl.to(".container", {
             scale: 6,
-            duration: 4,
+            duration: 2,
             ease: "powwer4.inOut"
         }, "-=1");
 
-        tl.to("nav, .nav-item a, .title p, .slide-num p, .preview p, .preview ul", {
+        tl.to("nav, .nav-item a, .title > p, .slide-num p, .preview p, .preview ul", {
             top: 0,
             stagger: 0.075,
             duration: 1,
