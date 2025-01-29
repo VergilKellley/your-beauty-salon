@@ -36,14 +36,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CUSTOM CSS STYLE SHEETS -->
     <link rel="stylesheet" href="css/all-services.css">
-
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/draggable-image-slider.css">
     <link rel="stylesheet" href="css/contact-form.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about.css">
+
+    <!-- REVIEWS SLIDER CSS -->
+    <link rel="stylesheet" href="css/reviews-slider.css">
+
+    <!-- MOBILE NAVAGATION CSS -->
+    <link rel="stylesheet" href="css/mobile-nav.css">
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,22 +58,19 @@
         href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/097e6a8a28.js" crossorigin="anonymous"></script>
-
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- REVIEWS SLIDER CSS -->
-    <link rel="stylesheet" href="css/reviews-slider.css">
-    <title><?= $business_name ?></title>
-
-    <!-- MOBILE NAVAGATION CSS -->
-    <link rel="stylesheet" href="css/mobile-nav.css">
     <!-- MOBILE NAVAGATION JAVASCRIPT-->
     <script src="js/mobile-nav.js" defer></script>
 
-    <link rel="stylesheet" href="css/about.css">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/097e6a8a28.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title><?= $business_name ?></title>
 
 </head>
 
