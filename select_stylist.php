@@ -890,7 +890,7 @@ if ($inputDaysSelected == 'Mon' && $stylistTimeSelected == '9:00 am') {
                         </div>";
     
                         /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Mon = 'yes' AND mon_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Mon')";
+                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Mon = 'yes' AND mon_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Mon')";
                         
                             $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
     
@@ -3119,7 +3119,7 @@ if ($inputDaysSelected == 'Tue' && $stylistTimeSelected == '9:00 am') {
                         </div>";
     
                         /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Tue = 'yes' AND tue_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Tue')";
+                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Tue = 'yes' AND tue_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Tue')";
                         
                             $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
     
@@ -5347,7 +5347,7 @@ if ($inputDaysSelected == 'Wed' && $stylistTimeSelected == '9:00 am') {
                         </div>";
     
                         /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Wed = 'yes' AND wed_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Wed')";
+                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Wed = 'yes' AND wed_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Wed')";
                         
                             $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
     
@@ -7577,7 +7577,7 @@ if ($inputDaysSelected == 'Wed' && $stylistTimeSelected == '9:00 am') {
                             </div>";
         
                             /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                            $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Thur = 'yes' AND thur_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Thu')";
+                            $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Thur = 'yes' AND thur_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Thu')";
                             
                                 $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
         
@@ -9801,7 +9801,7 @@ if ($inputDaysSelected == 'Fri' && $stylistTimeSelected == '9:00 am') {
                         </div>";
     
                         /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Fri = 'yes' AND fri_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Fri')";
+                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Fri = 'yes' AND fri_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Fri')";
                         
                             $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
     
@@ -12031,7 +12031,7 @@ if ($inputDaysSelected == 'Fri' && $stylistTimeSelected == '9:00 am') {
                             </div>";
         
                             /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                            $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Sat = 'yes' AND sat_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Sat')";
+                            $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Sat = 'yes' AND sat_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Sat')";
                             
                                 $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
         
@@ -14255,7 +14255,7 @@ if ($inputDaysSelected == 'Sun' && $stylistTimeSelected == '9:00 am') {
                         </div>";
     
                         /// DISPLAY AVAILABLE STYLISTS AFTER CHECKING APPPOINTMENTS TABLE TO SEE IF STYLIST IS ALREADY SCHEDULED ON REQUESTED DATE AND TIME
-                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Sun = 'yes' AND sun_1245_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:45 pm' AND event_date = '$inputDateSelected' AND event_day = 'Sun')";
+                        $show_avail_stylist_query = "SELECT stylist_name FROM stylist_info WHERE Sun = 'yes' AND sun_1230_pm = 'yes' AND stylist_name NOT IN (SELECT stylist_name FROM appointments WHERE time_available = '12:30 pm' AND event_date = '$inputDateSelected' AND event_day = 'Sun')";
                         
                             $show_stylist_avail_result = mysqli_query($conn, $show_avail_stylist_query);
     
