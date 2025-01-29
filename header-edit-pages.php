@@ -42,7 +42,7 @@
                     <a href="index">HOME</a>
                 </li>
                 <li>
-                    <a href="edit-homepage">EDIT HOMEPAGE</a>
+                    <a href="edit-homepage">EDIT WEBSITE</a>
                 </li>
                 <li>
                     <a href="edit-home-page-images">HOMEPAGE IMAGES</a>
