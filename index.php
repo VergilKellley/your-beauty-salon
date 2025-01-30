@@ -188,7 +188,7 @@ require 'header.php';
                             class="photo-gallery-card-image" src="./images/<?= $reviewers_img_1 ?>"
                             alt="<?= $reviewers_img_desc_1 ?>">
                         <div
-                            style="position:absolute;top:50px;display:flex;flex-direction:column;align-items:center;padding: 20px">
+                            style="position:absolute;top:50px;display:flex;flex-direction:column;align-items:center;padding: 30px">
                             <h2><?= $reviewers_name_1 ?></h2>
                             <p><?= $reviewers_comments_1 ?></p>
                         </div>
