@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 
     <?php
         require_once 'backend/db.php';
-        require_once 'backend/display_header_image.php';
+        // require_once 'backend/display_header_image.php';
     ?>
     <div
         style="background-image: url('uploads/<?= $header_img; ?>'); width: 100vw; height: 100%; position:absolute; top: 0; left:0; background-position: center; background-size: cover; background-repeat: no-repeat; z-index: -1; overflowX:hidden">
