@@ -3,9 +3,10 @@
     require_once 'backend/db.php';
     require_once 'backend/display_business_address.php';
     require_once 'backend/display_contact_info.php';
+    require_once 'backend/display_website_colors.php';
 ?>
 
-    <section class="contact">
+    <section style="background:black" class="contact">
         <div class="contact-content">
             <h2><?= $contact_page_title ?></h2>
             <p><?= $contact_page_text ?></p>
@@ -13,28 +14,28 @@
         <div class="contact-container">
             <div class="contactInfo">
                 <div class="contact-box">
-                    <div class="contact-icon"><b></b><i class="fa-solid fa-location-pin"></i></div>
+                    <div style="background: repeating-conic-gradient(from 27deg, white 0%, white 10%, transparent 10%, transparent 50%);" class="contact-icon"><b style="background:<?= $secondary_color ?>"></b><i class="fa-solid fa-location-pin"></i></div>
                     <div class="text">
-                        <h3>Address</h3>
+                        <h3 style="color:<?= $secondary_color ?>; font-size:1.5rem; font-weight:bold">Address</h3>
                         <p><?= $street_number ?><span> </span><?= $street_name ?><br><?= $city_name ?>,
                             <?= $state_name ?>,<br><?= $zip_code ?></p>
                     </div>
                 </div>
                 <div class="contact-box">
-                    <div class="contact-icon"><b></b><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-icon"><b style="background:<?= $secondary_color ?>"></b><i class="fa-solid fa-phone"></i></div>
                     <div class="text">
-                        <h3>Phone</h3>
-                        <p><?= $phone ?></p>
+                        <h3 style="color:<?= $secondary_color ?>; font-size:1.5rem; font-weight:bold">Phone</h3>
+                        <p><?= $business_phone ?></p>
                     </div>
                 </div>
                 <div class="contact-box">
-                    <div class="contact-icon"><b></b><i class="fa-solid fa-envelope"></i></div>
+                    <div class="contact-icon"><b style="background:<?= $secondary_color ?>"></b><i class="fa-solid fa-envelope"></i></div>
                     <div class="text">
-                        <h3>Email</h3>
-                        <p><?= $email ?></p>
+                        <h3 style="color:<?= $secondary_color ?>; font-size:1.5rem; font-weight:bold">Email</h3>
+                        <p><?= $business_email ?></p>
                     </div>
                 </div>
-                <h2 class="txt">Connect with us</h2>
+                <h2 style="border-left: 15px solid <?= $secondary_color ?>; font-size:2rem" class="txt">Connect with us</h2>
                 <ul class="sci">
                     <li><a href="<?= $facebook ?>" target="_blank" rel="noreferrer noopener"><i
                                 class="fa-brands fa-facebook-f"></i></a></li>
@@ -56,25 +57,25 @@
 
             <div class="contactForm">
                 <form action="backend/add_contact_form_message.php" method="post">
-                    <h2>Send Message</h2>
-                    <div class="inputBox">
+                    <h2 style="color: <?= $secondary_color ?>">Send Message</h2>
+                    <div style="border-bottom:2px solid <?= $secondary_color ?>" class="inputBox">
                         <input type="text" name="contact_form_name" required="required">
                         <span>Full Name</span>
                     </div>
-                    <div class="inputBox">
+                    <div style="border-bottom:2px solid <?= $secondary_color ?>" class="inputBox">
                         <input type="phone" name="contact_form_phone" required="required">
                         <span>Phone</span>
                     </div>
-                    <div class="inputBox">
+                    <div style="border-bottom:2px solid <?= $secondary_color ?>" class="inputBox">
                         <input type="email" name="contact_form_email" required="required">
                         <span>Email</span>
                     </div>
-                    <div class="inputBox">
+                    <div style="border-bottom:2px solid <?= $secondary_color ?>" class="inputBox">
                         <textarea name="contact_form_message" id="" required="required"></textarea>
                         <span>Type your message...</span>
                     </div>
                     <div class="inputBox">
-                        <button class="contact-form-send-btn" type="submit" name="submit_contact_form">SEND</button>
+                        <button style="background:<?= $secondary_color ?>; color:white;border:none" class="contact-form-send-btn" type="submit" name="submit_contact_form">SEND</button>
                         <!-- <input type="submit" value="Send" name="submit_contact_form"> -->
                     </div>
                 </form>
@@ -84,9 +85,10 @@
 
     <footer style='background:#000; position:relative; z-index:9999999999;'>
         <div class="fbox">
-            <p>Copyright &copy; 2025 <?= $business_name; ?> | Website designed & powered by<a style='color:#fff; text-decoration:none;padding:0' href="https://webqwick.com/" target='_blank'> webqwick.com</a>.</p>
-            
-            <p>All other trademarks, service marks and trade names referenced in this material are the property of their respective owner.</p>
+            <?php
+        $year = date("Y");
+        ?>
+            <p style="text-align:center">Copyright &copy; <?= $year ?> <?= $business_name; ?> | Website designed & powered by <a style='color:#fff; text-decoration:none;padding:0' href="https://webqwick.com/" target='_blank'> webqwick.com.</a> <span> All other trademarks, service marks and trade names referenced in this material are the property of their respective owner.</span></p>
         </div>
     </footer>
 </body>
