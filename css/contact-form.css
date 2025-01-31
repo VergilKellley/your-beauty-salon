@@ -385,6 +385,12 @@ nav .nav-item a {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .contact-container .contactForm form {
+        padding: 10px;
+    }
+}
+
 @media screen and (max-width: 400px) {
     nav {
         padding: .75em;
