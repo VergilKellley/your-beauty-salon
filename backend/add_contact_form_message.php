@@ -9,7 +9,7 @@ if(isset($_POST['submit_contact_form'])){
         $sql = "INSERT INTO contact_form_message (contact_form_name, contact_form_phone, contact_form_email, contact_form_message) VALUES ('$contact_form_name', '$contact_form_phone', '$contact_form_email', '$contact_form_message')";
         $result = mysqli_query($conn, $sql);
 
-header("location: ../edit-website#index");
+header("location: ../edit-homepage");
         die();
 } else {
     header("location: ../contact.php");
