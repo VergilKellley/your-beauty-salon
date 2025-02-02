@@ -8,8 +8,8 @@ $resultCheck = mysqli_num_rows($result);
 if ($resultCheck > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
     $business_name = $row['business_name'];
-    $phone = $row['phone'];
-    $email = $row['email'];
+    $business_phone = $row['business_phone'];
+    $business_email = $row['business_email'];
     $street_name = $row['street_name'];
     $street_number = $row['street_number'];
     $suite_number = $row['suite_number'];
