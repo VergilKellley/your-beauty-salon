@@ -175,12 +175,12 @@ require 'backend/display_contact_info.php';
                         //     unset($_SESSION['status']);
                         // } 
                         if (isset($_SESSION['stylist-name-empty'])) {
-                            echo '<div id="stylist-name-empty-modal" style="position:absolute; top: 50%; left:50%; transform:translate(-50%, -50%); width: 70%; height: 50px; padding:20px; z-index: 2; border: 1px solid green; background-color: red; border-radius:50px; display: flex; align-items: center; justify-content:center; font-size: 16px">
+                            echo '
                             
-                            <button id="closse-stylist-name-err-btn" style="position:absolute; top:-10px; right:10px; color:#fff; cursor:pointer; height: 20px; width:20px; background-color: red; border-radius: 50%; border:none;"  onclick="closeStylistNameEmptyModal()">x</button>
+                            <button id="closse-stylist-name-err-btn" style="display:flex;justify-content:space-between;align-items:center;position:absolute; top: 50%; left:50%; transform:translate(-50%, -50%); width: 70%; height: 150px; padding:20px; z-index: 2; background-color: red; border-radius: 5%; border:none;color:white;font-size:1.2rem"  onclick="closeStylistNameEmptyModal()"><h3 id="stylist-name-empty-text" style="color:white; text-align:center; font-size:1.2rem;position:relative">' . $_SESSION['stylist-name-empty'] . '</h3><span style="position:absolute;top: 10px; right:15px">x</span></button>
                             
-                            <h3 id="stylist-name-empty-text" style="color:#fff; text-align:center; font-size:16px">' . $_SESSION['stylist-name-empty'] . '</h3>
-                            </div>';
+                            
+                        ';
                             unset($_SESSION['stylist-name-empty']);
                         }
 
