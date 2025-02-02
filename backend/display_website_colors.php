@@ -7,7 +7,7 @@ $resultCheck = mysqli_num_rows($result);
 
 if ($resultCheck > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-    $primary_color = $row['main_color'];
+    $main_color = $row['main_color'];
     $secondary_color = $row['secondary_color'];
     $accent_color = $row['accent_color'];
     }
