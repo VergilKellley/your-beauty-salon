@@ -331,6 +331,12 @@ header {
     display: none;
 }
 
+
+.service-description-container {
+    width: 20vw;
+    margin-right:30px !important;
+}
+
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1340px){
     .banner {
@@ -361,11 +367,17 @@ header {
 
     .service-description-container {
         margin: 100px 0 50px;
+        width: auto;
+        margin-right:0;
     }
 
-    .service-description-container {
+    /* .service-description-container {
         margin-bottom: 50px;
-    }
+    } */
+    /* .service-description-container {
+        width: auto;
+        margin-right:0;
+    } */
 }
 
 @media screen and (max-width: 1195px) {
