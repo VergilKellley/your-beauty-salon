@@ -54,6 +54,8 @@
                 <iframe src="<?= $google_map_url ?>" style="border:0; width:100%; height: 426px; padding:20px"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
             <div class="contactForm">
                 <form action="backend/add_contact_form_message.php" method="post">
@@ -74,11 +76,35 @@
                         <textarea name="contact_form_message" id="" required="required"></textarea>
                         <span>Type your message...</span>
                     </div>
+                    <br />
+                    
+                    <div class="g-recaptcha" data-sitekey="6Lf1rMoqAAAAANIaD97DULvJR-RQt8FfgHlTN00a"></div>
                     <div class="inputBox">
-                        <button style="background:<?= $secondary_color ?>; color:white;border:none" class="contact-form-send-btn" type="submit" name="submit_contact_form">SEND</button>
+                        
+                        <!--<button style="background:<?= $secondary_color ?>; color:white;border:none" class="contact-form-send-btn" type="submit" value="submit" name="submit_contact_form">SEND</button>-->
+                        
                         <!-- <input type="submit" value="Send" name="submit_contact_form"> -->
                     </div>
+                    <br/>
+                    <input type="submit" value="Submit"   style="background:<?= $secondary_color ?>; color:white;border:none" class="contact-form-send-btn" name="submit_contact_form">
+                    
+                    
+                    <script>
+                        $("form").submit(function(event) {
+                          var recaptcha = $("#g-recaptcha-response").val();
+                          if (recaptcha === "") {
+                              event.preventDefault();
+                              alert("Please check the recaptcha");
+                          }
+                        });
+                    </script>
+
                 </form>
+    <!--                <form action="?" method="POST">-->
+    <!--  <div class="g-recaptcha" data-sitekey="6Lf1rMoqAAAAANIaD97DULvJR-RQt8FfgHlTN00a"></div>-->
+    <!--  <br/>-->
+    <!--  <input type="submit" value="Submit">-->
+    <!--</form>-->
             </div>
         </div>
     </section>
